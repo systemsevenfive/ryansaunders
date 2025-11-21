@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Saunders - iOS Developer</title>
+    <link rel="stylesheet" href="90sstyle.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Classic Mac Menu Bar -->
+        <nav class="menu-bar">
+            <a href="#about" class="menu-item">About</a>
+            <a href="#apps" class="menu-item">Apps</a>
+            <a href="#contact" class="menu-item">Contact</a>
+            <a href="https://www.linkedin.com/in/ryan-saunders-279523144/" class="menu-item" target="_blank">LinkedIn</a>
+        </nav>
+        
+        <!-- Header -->
+        <header>
+            <h1>RYAN SAUNDERS</h1>
+            <p class="subtitle">iOS Developer</p>
+        </header>
+        
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! If you've
+            </p>
+            <p>
+                When I'm not coding, you'll find me exploring the latest iOS features, contributing to open source projects, 
+                or enjoying a good cup of coffee while debugging that one elusive bug.
+            </p>
+            <p>
+                I believe in writing clean, maintainable code and creating apps that users love. Every pixel matters, 
+                and every interaction should feel delightful.
+            </p>
+        </section>
+        
+        <!-- Apps Section -->
+        <section id="apps">
+            <h2>My Apps</h2>
+            <p>Here are some of the apps I've worked on. Click to learn more or download them from the App Store.</p>
+            
+            <div class="apps-grid">
+                <div class="app-card">
+                    <h3>Integenius</h3>
+                    <p>A simple arithmetic flash cards game</p>
+                    <p>What started as a coding challenge became an ongoing learning experience with SwiftUI.</p>
+                    <a href="#" class="app-link">View on App Store</a>
+                </div>
+                
+                <div class="app-card">
+                    <h3>KitchenSync</h3>
+                    <p>A helpful way to manage cooking times </p>
+                    <a href="#" class="app-link">View on App Store</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-info" style="margin-top: 20px;">
+                <div class="contact-item">
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/ryan-saunders-279523144/" target="_blank">linkedin.com/in/ryan-saunders-279523144/</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Or email directly:</strong>
+                    <a href="mailto:contact@ryansaunders.ca">contact@ryansaunders.ca</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+            <a href="index1.html">✨ Prefer OSX?</a>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Ryan Saunders. Built with nostalgia and modern web standards.</p>
+            <p style="font-size: 12px; margin-top: 5px;">Made on a Mac, for the web, with love ❤️</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

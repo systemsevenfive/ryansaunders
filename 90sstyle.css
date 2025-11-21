@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mac-beige: #F5F5DC;
+    --mac-blue: #0066CC;
+    --mac-dark-blue: #003366;
+    --mac-gray: #C0C0C0;
+    --mac-dark-gray: #808080;
+    --mac-light-gray: #E0E0E0;
+    --mac-border: #000000;
+    --mac-shadow: #404040;
+}
+
+body {
+    font-family: 'Courier Prime', monospace;
+    background: var(--mac-beige);
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+    color: var(--mac-border);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--mac-light-gray);
+    border: 3px solid var(--mac-border);
+    box-shadow: 
+        8px 8px 0 var(--mac-shadow),
+        inset 2px 2px 0 rgba(255,255,255,0.5);
+    padding: 30px;
+}
+
+/* Menu Bar - Classic Mac Style */
+.menu-bar {
+    background: var(--mac-gray);
+    border: 2px solid var(--mac-border);
+    border-bottom: 3px solid var(--mac-border);
+    padding: 8px 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 
+        inset -1px -1px 0 rgba(0,0,0,0.3),
+        inset 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+.menu-item {
+    background: var(--mac-light-gray);
+    border: 2px outset var(--mac-light-gray);
+    padding: 6px 12px;
+    text-decoration: none;
+    color: var(--mac-border);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.1s;
+    box-shadow: 
+        2px 2px 0 rgba(0,0,0,0.2),
+        inset -1px -1px 0 rgba(0,0,0,0.1);
+}
+
+.menu-item:hover {
+    border: 2px inset var(--mac-light-gray);
+    box-shadow: 
+        inset 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.menu-item:active {
+    border: 2px inset var(--mac-light-gray);
+    box-shadow: inset 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--mac-beige);
+    border: 2px solid var(--mac-border);
+    box-shadow: 
+        inset 2px 2px 0 rgba(255,255,255,0.5),
+        inset -2px -2px 0 rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 48px;
+    color: var(--mac-blue);
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--mac-dark-gray);
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: var(--mac-beige);
+    border: 2px solid var(--mac-border);
+    box-shadow: 
+        inset 2px 2px 0 rgba(255,255,255,0.5),
+        inset -2px -2px 0 rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    color: var(--mac-blue);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--mac-border);
+    padding-bottom: 8px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* App Links - Classic Button Style */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.app-card {
+    background: var(--mac-light-gray);
+    border: 3px outset var(--mac-light-gray);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 
+        3px 3px 0 rgba(0,0,0,0.2),
+        inset -1px -1px 0 rgba(0,0,0,0.1);
+    transition: all 0.1s;
+}
+
+.app-card:hover {
+    border: 3px inset var(--mac-light-gray);
+    box-shadow: 
+        inset 3px 3px 0 rgba(0,0,0,0.2);
+    transform: translate(2px, 2px);
+}
+
+.app-card h3 {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: var(--mac-blue);
+    margin-bottom: 10px;
+}
+
+.app-card p {
+    font-size: 14px;
+    color: var(--mac-dark-gray);
+    margin-bottom: 15px;
+}
+
+.app-link {
+    display: inline-block;
+    background: var(--mac-blue);
+    color: white;
+    border: 2px outset var(--mac-blue);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 
+        2px 2px 0 rgba(0,0,0,0.3),
+        inset -1px -1px 0 rgba(0,0,0,0.2);
+    transition: all 0.1s;
+}
+
+.app-link:hover {
+    border: 2px inset var(--mac-blue);
+    box-shadow: inset 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+/* Contact Section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: var(--mac-light-gray);
+    border: 2px outset var(--mac-light-gray);
+    box-shadow: 
+        2px 2px 0 rgba(0,0,0,0.1),
+        inset -1px -1px 0 rgba(0,0,0,0.05);
+}
+
+.contact-item a {
+    color: var(--mac-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form - Classic Mac Style */
+.contact-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--mac-light-gray);
+    border: 2px inset var(--mac-light-gray);
+    box-shadow: 
+        inset 2px 2px 0 rgba(0,0,0,0.2),
+        inset -1px -1px 0 rgba(255,255,255,0.5);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--mac-border);
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    background: white;
+    border: 2px inset var(--mac-light-gray);
+    font-family: 'Courier Prime', monospace;
+    font-size: 14px;
+    color: var(--mac-border);
+    box-shadow: 
+        inset 2px 2px 0 rgba(0,0,0,0.2),
+        inset -1px -1px 0 rgba(255,255,255,0.5);
+    transition: all 0.1s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px inset var(--mac-blue);
+    box-shadow: 
+        inset 2px 2px 0 rgba(0,0,0,0.3),
+        inset -1px -1px 0 rgba(255,255,255,0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background: var(--mac-blue);
+    color: white;
+    border: 2px outset var(--mac-blue);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Courier Prime', monospace;
+    cursor: pointer;
+    box-shadow: 
+        2px 2px 0 rgba(0,0,0,0.3),
+        inset -1px -1px 0 rgba(0,0,0,0.2);
+    transition: all 0.1s;
+}
+
+.submit-button:hover {
+    border: 2px inset var(--mac-blue);
+    box-shadow: inset 2px 2px 0 rgba(0,0,0,0.3);
+    transform: translate(1px, 1px);
+}
+
+.submit-button:active {
+    border: 2px inset var(--mac-blue);
+    box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4);
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid var(--mac-border);
+    background: var(--mac-beige);
+    font-size: 14px;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    border-color: var(--mac-blue);
+    color: var(--mac-dark-blue);
+}
+
+.form-message.error {
+    display: block;
+    border-color: #CC0000;
+    color: #CC0000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid var(--mac-border);
+    color: var(--mac-dark-gray);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+    
+    .menu-bar {
+        flex-direction: column;
+    }
+    
+    .menu-item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .apps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Classic Mac Cursor Effect */
+@media (hover: hover) {
+    * {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M0 0 L16 0 L0 16 Z" fill="black"/></svg>'), auto;
+    }
+    
+    a, button, .menu-item {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M2 2 L14 2 L14 14 L2 14 Z" fill="white" stroke="black"/><path d="M4 4 L12 4 L12 12 L4 12 Z" fill="black"/></svg>'), pointer;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Placeholder for future blog */
+.blog-teaser {
+    background: var(--mac-light-gray);
+    border: 2px dashed var(--mac-dark-gray);
+    padding: 20px;
+    text-align: center;
+    color: var(--mac-dark-gray);
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Theme Switcher - 90s Style */
+.theme-switcher {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--mac-beige);
+    border: 2px dashed var(--mac-dark-gray);
+}
+
+.theme-switcher a {
+    color: var(--mac-blue);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    background: var(--mac-light-gray);
+    border: 2px outset var(--mac-light-gray);
+    display: inline-block;
+    box-shadow: 
+        2px 2px 0 rgba(0,0,0,0.2),
+        inset -1px -1px 0 rgba(0,0,0,0.1);
+    transition: all 0.1s;
+}
+
+.theme-switcher a:hover {
+    border: 2px inset var(--mac-light-gray);
+    box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+}
+
