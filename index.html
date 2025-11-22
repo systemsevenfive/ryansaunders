@@ -79,11 +79,23 @@
                     <strong>LinkedIn:</strong>
                     <a href="https://www.linkedin.com/in/ryan-saunders-279523144/" target="_blank">linkedin.com/in/ryan-saunders-279523144/</a>
                 </div>
-                <div class="contact-item">
-                    <strong>Or email directly:</strong>
-                    <a href="mailto:contact@ryansaunders.ca">contact@ryansaunders.ca</a>
-                </div>
             </div>
+            
+            <form
+                action="https://formspree.io/f/mvgyazvd"
+                method="POST"
+                class="contact-form"
+            >
+                <div class="form-group">
+                    <label for="email">Your email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your message:</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send</button>
+            </form>
         </section>
         
         <!-- Theme Switcher -->
@@ -93,8 +105,7 @@
         
         <!-- Footer -->
         <footer>
-            <p>© 2025 Ryan Saunders. Built with nostalgia and modern web standards.</p>
-            <p style="font-size: 12px; margin-top: 5px;">Made on a Mac, for the web, with love ❤️</p>
+            <p>© 2025 Ryan Saunders. Built from scratch for no reason other than bragging rights.</p>
         </footer>
     </div>
     
