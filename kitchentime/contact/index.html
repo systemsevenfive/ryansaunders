@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Integenius</title>
+    <link rel="stylesheet" href="../../90sstyle.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--mac-light-gray);
+            border: 2px outset var(--mac-light-gray);
+            text-decoration: none;
+            color: var(--mac-border);
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 
+                2px 2px 0 rgba(0,0,0,0.2),
+                inset -1px -1px 0 rgba(0,0,0,0.1);
+            transition: all 0.1s;
+        }
+        
+        .back-link:hover {
+            border: 2px inset var(--mac-light-gray);
+            box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+        }
+        
+        .contact-content {
+            background: var(--mac-beige);
+            border: 2px solid var(--mac-border);
+            padding: 30px;
+            box-shadow: 
+                inset 2px 2px 0 rgba(255,255,255,0.5),
+                inset -2px -2px 0 rgba(0,0,0,0.2);
+        }
+        
+        .contact-content h1 {
+            font-family: 'VT323', monospace;
+            font-size: 36px;
+            color: var(--mac-blue);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+        }
+        
+        .contact-content p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        /* Contact Form - Classic Mac Style */
+        .contact-form {
+            margin-top: 20px;
+            padding: 20px;
+            background: var(--mac-light-gray);
+            border: 2px inset var(--mac-light-gray);
+            box-shadow: 
+                inset 2px 2px 0 rgba(0,0,0,0.2),
+                inset -1px -1px 0 rgba(255,255,255,0.5);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--mac-border);
+            font-size: 14px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            background: white;
+            border: 2px inset var(--mac-light-gray);
+            font-family: 'Courier Prime', monospace;
+            font-size: 14px;
+            color: var(--mac-border);
+            box-shadow: 
+                inset 2px 2px 0 rgba(0,0,0,0.2),
+                inset -1px -1px 0 rgba(255,255,255,0.5);
+            transition: all 0.1s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border: 2px inset var(--mac-blue);
+            box-shadow: 
+                inset 2px 2px 0 rgba(0,0,0,0.3),
+                inset -1px -1px 0 rgba(255,255,255,0.5);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: var(--mac-blue);
+            color: white;
+            border: 2px outset var(--mac-blue);
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: 'Courier Prime', monospace;
+            cursor: pointer;
+            box-shadow: 
+                2px 2px 0 rgba(0,0,0,0.3),
+                inset -1px -1px 0 rgba(0,0,0,0.2);
+            transition: all 0.1s;
+        }
+        
+        .submit-button:hover {
+            border: 2px inset var(--mac-blue);
+            box-shadow: inset 2px 2px 0 rgba(0,0,0,0.3);
+            transform: translate(1px, 1px);
+        }
+        
+        .submit-button:active {
+            border: 2px inset var(--mac-blue);
+            box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4);
+        }
+        
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border: 2px solid var(--mac-border);
+            background: var(--mac-beige);
+            font-size: 14px;
+            display: none;
+        }
+        
+        .form-message.success {
+            display: block;
+            border-color: var(--mac-blue);
+            color: var(--mac-dark-blue);
+        }
+        
+        .form-message.error {
+            display: block;
+            border-color: #CC0000;
+            color: #CC0000;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 10px;
+            }
+            
+            .contact-content {
+                padding: 20px;
+            }
+            
+            .contact-content h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-container">
+            <div class="button-container">
+                <a href="../../index.html" class="back-link">← Back to Home</a>
+                <a href="../privacy/index.html" class="back-link">Privacy Policy</a>
+            </div>
+            
+            <div class="contact-content">
+                <h1>Kitchen Time Contact</h1>
+                
+                <p>
+                    Have a question or feedback about Kitchen Time? Please fill out the form below and I'll get back to you as soon as possible.
+                </p>
+                
+                <form
+                    action="https://formspree.io/f/mvgyazvd"
+                    method="POST"
+                    class="contact-form"
+                >
+                    <div class="form-group">
+                        <label for="email">Your email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message:</label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send</button>
+                </form>
+            </div>
+            
+            <a href="../../index.html" class="back-link" style="margin-top: 30px; display: block; text-align: center;">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+
