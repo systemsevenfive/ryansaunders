@@ -294,6 +294,37 @@ section p:last-child {
     transform: scale(0.98);
 }
 
+.app-card--coming-soon {
+    border-style: dashed;
+    border-color: var(--ios-border-medium);
+}
+
+.app-card-badge {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ios-secondary-label);
+    background: var(--ios-fill);
+    border-radius: 999px;
+}
+
+.app-link-secondary {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ios-blue);
+    text-decoration: none;
+}
+
+.app-link-secondary:hover {
+    text-decoration: underline;
+}
+
 /* ——— Contact ——— */
 .contact-info {
     display: flex;
@@ -537,6 +568,16 @@ footer {
     font-size: 17px;
     line-height: 1.5;
     color: var(--ios-label);
+}
+
+.privacy-content a {
+    color: var(--ios-blue);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.privacy-content a:hover {
+    text-decoration: underline;
 }
 
 .privacy-content ul {
