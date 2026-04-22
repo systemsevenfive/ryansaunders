@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Time — Ryan Saunders</title>
+  <meta name="description" content="Kitchen Time — parallel cooking timers for the four-burner dinner. By Ryan Saunders.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>RYAN SAUNDERS</a>
+  <div class="links">
+    <a href="/#shipped" aria-current="page">Work</a>
+    <a href="/#lab">Lab</a>
+    <a href="/about/">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="crumb">← <a href="/#shipped">Back to Work</a></div>
+
+  <article>
+    <header class="title-block">
+      <div class="eyebrow">Project · Shipped</div>
+      <h1>Kitchen Time</h1>
+      <p class="tag">Parallel cooking timers for the four-burner dinner. Named steps, multiple clocks, zero fuss.</p>
+      <div class="meta-grid">
+        <div>Status<b class="live">● Live on App Store</b></div>
+        <div>Year<b>2025 — 2026</b></div>
+        <div>Platform<b>iOS 26 · SwiftUI</b></div>
+        <div>Next up<b>v2 · spring 2026</b></div>
+      </div>
+    </header>
+
+    <div class="hero-image kt" aria-hidden="true"></div>
+
+    <section class="prose">
+      <h2><span class="num">01</span>Why it exists</h2>
+      <p>If you've worked in a kitchen, or made a dinner that required more than one burner, you've probably run into timing issues. Just trying to have one main course and side dish ready at the same time can be a challenge. Trying to do it for Thanksgiving, Christmas, or a fancy dinner party can be panic-inducing</em>.</p>
+      <p>The Timer app provided in iOS is good, but it could be better. What if you need a timer to go off every five minutes until you say stop? What if you need 4 different timers that all need to end at the same time?</p>
+
+      <h2><span class="num">02</span>What I figured out</h2>
+      <p>
+      <p>Under the hood: pure SwiftUI with SwiftData persistence, background tasks that survive the app being backgrounded, and a Live Activity so your Lock Screen becomes the kitchen display.</p>
+
+      <div class="callout">This was all about intent. How do I make this easier without adding layers of complexity? </div>
+
+      <div class="stack">
+        <span class="pill">SwiftUI</span>
+        <span class="pill">SwiftData</span>
+        <span class="pill">Live Activities</span>
+        <span class="pill">iOS 26</span>
+        <span class="pill">MVVM</span>
+        <span class="pill">Swift Concurrency</span>
+      </div>
+
+      <h2><span class="num">03</span>What's next</h2>
+      <p>V2 lands in spring 2026 with shared timer sessions (for households cooking together), per-timer haptic patterns, and a redesigned home screen for iPad.</p>
+    </section>
+
+    <a class="btn primary" href="https://apps.apple.com/ca/app/kitchen-time/id6755136814" target="_blank" rel="noopener noreferrer">View on App Store</a>
+  </article>
+
+  <nav class="next-nav" aria-label="Case study navigation">
+    <a href="/integenius/">
+      <div class="label">← Previous</div>
+      <div class="title">Integenius</div>
+    </a>
+    <a href="/solitairezero/">
+      <div class="label">Next →</div>
+      <div class="title">Solitaire Zero</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 · RYAN SAUNDERS</span>
+  <span class="jab">You're viewing this in light mode — bold choice.</span>
+  <span>v26</span>
+</footer>
+
+</body>
+</html>
