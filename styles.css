@@ -608,12 +608,14 @@ a { color: inherit; }
   .title-block .meta-grid .soon { color: #a85d00; }
 }
 
-/* Per-project hero image — placeholder gradients, replace with real screenshots later */
+/* Per-project hero: 16:9 gradient placeholder, or full-bleed screenshot if provided. */
 .hero-image {
   margin: 0 0 40px;
   border-radius: var(--r-lg);
   overflow: hidden;
   border: 1px solid var(--rule);
+}
+.hero-image:not(:has(.hero-screenshot)) {
   aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
@@ -622,6 +624,12 @@ a { color: inherit; }
 .hero-image.integenius { background: linear-gradient(135deg, #ffb4e1 0%, #ff2d95 60%, #6a0d4a 140%); }
 .hero-image.kt         { background: linear-gradient(135deg, #ffe8b4 0%, #ff9f0a 60%, #d6177a 140%); }
 .hero-image.sz         { background: linear-gradient(135deg, #b8f2d6 0%, #30d158 60%, #0a4d2a 140%); }
+
+.hero-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* Prose */
 .prose {
