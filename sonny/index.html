@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonny — Ryan Saunders</title>
+  <meta name="description" content="Sonny — software concepts, mapped. A lab project by Ryan Saunders.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>RYAN SAUNDERS</a>
+  <div class="links">
+    <a href="/#shipped">Work</a>
+    <a href="/#lab" aria-current="page">Lab</a>
+    <a href="/about/">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="crumb">← <a href="/#lab">Back to Lab</a></div>
+
+  <article>
+    <header class="title-block">
+      <div class="eyebrow">Lab · Tinkering</div>
+      <h1>Sonny</h1>
+      <p class="tag">My personal knowledge tool.</p>
+      <div class="meta-grid">
+        <div>Status<b>● Tinkering</b></div>
+        <div>Year<b>2026</b></div>
+        <div>Platform<b>Web · Vanilla JS</b></div>
+        <div>Track<b>EXP-005 · AI</b></div>
+      </div>
+    </header>
+
+    <section class="prose">
+      <h2><span class="num">01</span>Why it exists</h2>
+      <p>Two things at once. First, my personal tech-term glossary: concepts I want to keep fresh, with the relationships between them visible at a glance. Second, a prototype for what I really want: a tool that ingests an unfamiliar iOS codebase and shows me its major structures and how they connect, so I can ramp up in hours instead of weeks.</p>
+
+      <h2><span class="num">02</span>What I'm exploring</h2>
+      <p>The interesting design work is the contract between Sonny (the renderer) and any generator that produces a model: a small, versioned JSON schema with categories, nodes, and typed relationships. Hand-authored mental maps today. A code analyzer tomorrow. The renderer doesn't care which.</p>
+      <p>Vanilla JS, no build step. Cytoscape.js handles the layout. The complexity lives in the schema, not the framework choice.</p>
+
+      <div class="callout">A clean contract beats a clever framework. Make the data shape obvious and the rest gets easier.</div>
+
+      <div class="stack">
+        <span class="pill">Vanilla JS</span>
+        <span class="pill">Cytoscape.js</span>
+        <span class="pill">JSON Schema</span>
+        <span class="pill">Graph Visualization</span>
+      </div>
+
+      <h2><span class="num">03</span>What's next</h2>
+      <p>A generator that walks an iOS project (Swift modules, types, view-model relationships, dependency edges) and emits a Sonny model. The renderer is the easy part. Making the generator opinionated enough to be useful, and conservative enough to be honest, is the work.</p>
+    </section>
+  </article>
+
+  <nav class="next-nav" aria-label="Lab navigation">
+    <a href="/chartula/">
+      <div class="label">← Previous</div>
+      <div class="title">Chartula</div>
+    </a>
+    <a href="/edassists/">
+      <div class="label">Next →</div>
+      <div class="title">Ed Assists</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 · RYAN SAUNDERS</span>
+  <span class="jab">You're viewing this in light mode — bold choice.</span>
+  <span>v26</span>
+</footer>
+
+</body>
+</html>

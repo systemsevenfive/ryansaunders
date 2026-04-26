@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ed Assists — Ryan Saunders</title>
+  <meta name="description" content="Ed Assists — a quiet AI helper for video editors. A lab project by Ryan Saunders.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>RYAN SAUNDERS</a>
+  <div class="links">
+    <a href="/#shipped">Work</a>
+    <a href="/#lab" aria-current="page">Lab</a>
+    <a href="/about/">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="crumb">← <a href="/#lab">Back to Lab</a></div>
+
+  <article>
+    <header class="title-block">
+      <div class="eyebrow">Lab · Prototype</div>
+      <h1>Ed Assists</h1>
+      <p class="tag">Start editing sooner.</p>
+      <div class="meta-grid">
+        <div>Status<b>● Prototype</b></div>
+        <div>Year<b>2026</b></div>
+        <div>Platform<b>iOS 26 · macOS 26</b></div>
+        <div>Track<b>EXP-001 · Tool</b></div>
+      </div>
+    </header>
+
+    <section class="prose">
+      <h2><span class="num">01</span>Why it exists</h2>
+      <p>Years ago, I was an Assistant Editor for a show called Museum Secrets. In addition to being one of the go-to Mac guys for supporting a fleet of Mac Pros, my job involved setting up projects for the editors, sourcing stock footage, and conformning the final edit. My least favourite task was Log and Transfer, where each clip from the day's shoot had to be analyzed for content and specifications, and those details added to a spreadsheet. It was tedious, and it was a blocker to the main editors.</p>
+
+      <h2><span class="num">02</span>What I'm exploring</h2>
+      <p>A Mac and iPad companion that ingests a project folder, classifies clips with on-device sound and image analysis, and offers structured suggestions you can accept or ignore. Nothing automatic, nothing in the cut without your permission. Save time on the boring stuff, refine as needed, and get back to the creative work.</p>
+      <p>Architecture-wise, it's a multi-package Swift workspace (EdModel, EdMedia, EdAnalysis, EdExports, EdUI) under strict Swift 6 concurrency. The split keeps the analysis pipeline reusable and testable independently of the UI.</p>
+
+      <div class="callout">The goal isn't to edit for you. It's to do the boring parts so you can edit faster.</div>
+
+      <div class="stack">
+        <span class="pill">SwiftUI</span>
+        <span class="pill">AVFoundation</span>
+        <span class="pill">SoundAnalysis</span>
+        <span class="pill">Foundation Models</span>
+        <span class="pill">Modular SwiftPM</span>
+        <span class="pill">Swift 6</span>
+      </div>
+
+      <h2><span class="num">03</span>What's next</h2>
+      <p>Clip analysis and categorization is working in Alpha, continuing to refine and work towards a first release.</p>
+    </section>
+  </article>
+
+  <nav class="next-nav" aria-label="Lab navigation">
+    <a href="/sonny/">
+      <div class="label">← Previous</div>
+      <div class="title">Sonny</div>
+    </a>
+    <a href="/shoproute/">
+      <div class="label">Next →</div>
+      <div class="title">ShopRoute</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 · RYAN SAUNDERS</span>
+  <span class="jab">You're viewing this in light mode — bold choice.</span>
+  <span>v26</span>
+</footer>
+
+</body>
+</html>

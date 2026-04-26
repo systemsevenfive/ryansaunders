@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LCARS — Ryan Saunders</title>
+  <meta name="description" content="LCARS — a Star Trek tribute that doubles as my home dashboard. A lab project by Ryan Saunders.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>RYAN SAUNDERS</a>
+  <div class="links">
+    <a href="/#shipped">Work</a>
+    <a href="/#lab" aria-current="page">Lab</a>
+    <a href="/about/">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="crumb">← <a href="/#lab">Back to Lab</a></div>
+
+  <article>
+    <header class="title-block">
+      <div class="eyebrow">Lab · Tinkering</div>
+      <h1>LCARS</h1>
+      <p class="tag">A tribute to The Next Generation, doing actual work as my home dashboard.</p>
+      <div class="meta-grid">
+        <div>Status<b>● Tinkering</b></div>
+        <div>Year<b>2026</b></div>
+        <div>Platform<b>iOS 26 · SwiftUI</b></div>
+        <div>Track<b>EXP-003 · UI</b></div>
+      </div>
+    </header>
+
+    <section class="prose">
+      <h2><span class="num">01</span>Why it exists</h2>
+      <p>I love TNG. It's one of the reasons I love working with iPads especially. Growing up, I wanted to get to a point where tablet computers were so ubiquitous that the stack on Captain Picard's would not seem unrealistic. The LCARS design, despite not necessarily being the most practical, is one of the most unique and instantly recognizable sci-fi design themes. The Apple Home app does its job, but I wanted to know if you could build a serious, useful home dashboard that also looks like it belongs on the bridge of the Enterprise-D.</p>
+
+      <h2><span class="num">02</span>What I'm exploring</h2>
+      <p>Right now: a HomeKit-driven dashboard in authentic LCARS panels, on iPhone and iPad. The interesting part is making the asymmetric layouts feel right with real, variable data, not just static mockups. Weather and a small news rail are next once the layout system is stable.</p>
+
+      <div class="callout">I can't ask Siri for "Tea, Earl Grey, hot" yet, but we're a lot closer now than what we dreamed of in the 90s.</div>
+
+      <div class="stack">
+        <span class="pill">SwiftUI</span>
+        <span class="pill">HomeKit</span>
+        <span class="pill">SwiftData</span>
+        <span class="pill">Observation</span>
+        <span class="pill">MVVM</span>
+      </div>
+
+      <h2><span class="num">03</span>What's next</h2>
+      <p>Stabilize the layout system enough that I can reuse it for non-Trek themed dashboards too. Same skeleton, different skin.</p>
+    </section>
+  </article>
+
+  <nav class="next-nav" aria-label="Lab navigation">
+    <a href="/shoproute/">
+      <div class="label">← Previous</div>
+      <div class="title">ShopRoute</div>
+    </a>
+    <a href="/chartula/">
+      <div class="label">Next →</div>
+      <div class="title">Chartula</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 · RYAN SAUNDERS</span>
+  <span class="jab">You're viewing this in light mode — bold choice.</span>
+  <span>v26</span>
+</footer>
+
+</body>
+</html>

@@ -396,9 +396,12 @@ a { color: inherit; }
   flex-direction: column;
   justify-content: space-between;
   min-height: 150px;
+  text-decoration: none;
+  color: inherit;
   transition: border-color 0.25s ease, background 0.25s ease;
 }
-.lab-tile:hover {
+.lab-tile:hover,
+.lab-tile:focus-visible {
   border-color: var(--accent-cyan);
   background: var(--accent-cyan-soft);
 }
