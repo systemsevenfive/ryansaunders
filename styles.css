@@ -836,9 +836,7 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
 }
-.hero-image.integenius { background: linear-gradient(135deg, #ffb4e1 0%, #ff2d95 60%, #6a0d4a 140%); }
 .hero-image.kt         { background: linear-gradient(135deg, #ffe8b4 0%, #ff9f0a 60%, #d6177a 140%); }
-.hero-image.sz         { background: linear-gradient(135deg, #b8f2d6 0%, #30d158 60%, #0a4d2a 140%); }
 .hero-image.nexus { background: linear-gradient(135deg, #ddd6fe 0%, #a78bfa 60%, #4c1d95 140%); }
 
 .hero-screenshot {
