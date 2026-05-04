@@ -17,6 +17,8 @@
   --accent-soft:   rgba(255, 45, 149, 0.18);
   --accent-cyan:   #00c8ff;
   --accent-cyan-soft: rgba(0, 200, 255, 0.14);
+  --accent-violet:      #a78bfa;
+  --accent-violet-soft: rgba(167, 139, 250, 0.14);
   --nav-bg:        rgba(10, 10, 10, 0.85);
   --tile-bg:       linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
 
@@ -49,6 +51,8 @@
     --accent-soft: rgba(214, 23, 122, 0.12);
     --accent-cyan: #007ea6;
     --accent-cyan-soft: rgba(0, 126, 166, 0.10);
+    --accent-violet:      #7c3aed;
+    --accent-violet-soft: rgba(124, 58, 237, 0.10);
     --nav-bg:      rgba(250, 249, 246, 0.85);
     --tile-bg:     linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0));
   }
@@ -272,6 +276,7 @@ a { color: inherit; }
   text-transform: uppercase;
 }
 .hero .meta b { color: var(--text); font-weight: 600; }
+.hero .meta .tools-count b { color: var(--accent-violet); }
 
 /* Section header — shared by Shipped/Lab/About/Contact */
 .sec-head {
@@ -377,6 +382,110 @@ a { color: inherit; }
   .ship-tile .status.soon { color: #a85d00; }
 }
 
+/* ========== Tools grid ========== */
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding-bottom: 20px;
+}
+@media (max-width: 900px) { .tools { grid-template-columns: 1fr; } }
+
+.tool-tile {
+  display: block;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-md);
+  padding: 26px 22px;
+  background: var(--tile-bg);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.tool-tile::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-violet), transparent);
+}
+.tool-tile:hover,
+.tool-tile:focus-visible {
+  border-color: var(--accent-violet);
+  transform: translateY(-2px);
+}
+
+.tool-tile .monogram {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-md);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--accent-violet-soft);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: var(--accent-violet);
+}
+
+.tool-tile h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  color: var(--text);
+}
+.tool-tile .sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+.tool-tile .module-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+.tool-tile .module-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: var(--accent-violet);
+  background: var(--accent-violet-soft);
+  border-radius: var(--r-sm);
+  padding: 2px 6px;
+}
+.tool-tile .integration-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+.tool-tile .tile-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+  margin-top: 4px;
+}
+.tool-tile .status-running { color: var(--accent-violet); }
+
 /* ========== Lab grid ========== */
 
 .lab {
@@ -433,6 +542,110 @@ a { color: inherit; }
   letter-spacing: 0.08em;
   color: var(--text-faint);
   margin-top: 14px;
+}
+.lab-tile.neon-arcade {
+  border-color: rgba(255, 45, 149, 0.35);
+  background: rgba(255, 45, 149, 0.03);
+}
+.lab-tile.neon-arcade .label { color: var(--accent); }
+.lab-tile.neon-arcade .bottom { color: var(--accent); opacity: 0.7; }
+
+/* ========== Module strip (Nexus page) ========== */
+
+.module-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+@media (max-width: 900px) { .module-strip { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .module-strip { grid-template-columns: repeat(2, 1fr); } }
+
+.module-card {
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  background: var(--accent-violet-soft);
+  border-radius: var(--r-md);
+  padding: 16px 14px;
+}
+.module-card .module-name {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-violet);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.module-card .module-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ========== Arcade games list (Neon Arcade page) ========== */
+
+.arcade-games {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 20px 0 28px;
+  max-width: var(--max-prose);
+}
+.arcade-game {
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-md);
+  padding: 22px 24px;
+  background: var(--tile-bg);
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  gap: 0 20px;
+}
+.arcade-game-inspo {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 8px;
+  grid-column: 1;
+}
+.arcade-game-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  color: var(--text);
+  grid-column: 1;
+}
+.arcade-game-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+  grid-column: 1;
+}
+.arcade-game-meta {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+@media (max-width: 640px) {
+  .arcade-game { grid-template-columns: 1fr; }
+  .arcade-game-meta { grid-column: 1; grid-row: auto; flex-direction: row; gap: 12px; margin-top: 14px; }
 }
 
 /* ========== About teaser ========== */
@@ -603,11 +816,13 @@ a { color: inherit; }
   font-family: var(--font-text);
 }
 .title-block .meta-grid .live { color: #30d158; }
+.title-block .meta-grid .running { color: var(--accent-violet); }
 .title-block .meta-grid .soon { color: #ff9f0a; }
 
 /* Light-mode contrast override for meta-grid status */
 @media (prefers-color-scheme: light) {
   .title-block .meta-grid .live { color: #1a7f3e; }
+  .title-block .meta-grid .running { color: #6d28d9; }
   .title-block .meta-grid .soon { color: #a85d00; }
 }
 
@@ -627,6 +842,7 @@ a { color: inherit; }
 .hero-image.integenius { background: linear-gradient(135deg, #ffb4e1 0%, #ff2d95 60%, #6a0d4a 140%); }
 .hero-image.kt         { background: linear-gradient(135deg, #ffe8b4 0%, #ff9f0a 60%, #d6177a 140%); }
 .hero-image.sz         { background: linear-gradient(135deg, #b8f2d6 0%, #30d158 60%, #0a4d2a 140%); }
+.hero-image.nexus { background: linear-gradient(135deg, #ddd6fe 0%, #a78bfa 60%, #4c1d95 140%); }
 
 .hero-screenshot {
   display: block;
