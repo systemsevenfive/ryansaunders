@@ -346,9 +346,6 @@ a { color: inherit; }
   border-radius: 9px;
   margin-bottom: 20px;
 }
-.ship-tile.integenius .icon { background: linear-gradient(135deg, #ff2d95, #ff6b9d); }
-.ship-tile.kt         .icon { background: linear-gradient(135deg, #ff9f0a, #ffd60a); }
-.ship-tile.sz         .icon { background: linear-gradient(135deg, #30d158, #00e5a0); }
 
 .ship-tile h3 {
   font-family: var(--font-display);
