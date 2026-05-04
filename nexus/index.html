@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus — Ryan Saunders</title>
+  <meta name="description" content="Nexus — my personal dev workflow hub. Tickets, reports, designs, architecture, and knowledge base in one local interface.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>RYAN SAUNDERS</a>
+  <div class="links">
+    <a href="/#shipped">Work</a>
+    <a href="/#tools" aria-current="page">Tools</a>
+    <a href="/#lab">Lab</a>
+    <a href="/about/">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="crumb">← <a href="/#tools">Back to Tools</a></div>
+
+  <article>
+    <header class="title-block">
+      <div class="eyebrow">Tools · Built &amp; Running</div>
+      <h1>Nexus</h1>
+      <p class="tag">My personal dev workflow hub. Tickets, reports, designs, architecture, and knowledge base — one interface, built to fit how I actually work.</p>
+      <div class="meta-grid">
+        <div>Status<b class="running">● Running</b></div>
+        <div>Year<b>2025 — 2026</b></div>
+        <div>Platform<b>Node.js · Web</b></div>
+        <div>Repo<b>Local · Private</b></div>
+      </div>
+    </header>
+
+    <div class="module-strip">
+      <div class="module-card">
+        <div class="module-name">Tickets</div>
+        <p class="module-desc">Lightweight board and ticket system across all projects</p>
+      </div>
+      <div class="module-card">
+        <div class="module-name">Reports</div>
+        <p class="module-desc">Themed viewer for Claude session outputs — standups, post-mortems, insights</p>
+      </div>
+      <div class="module-card">
+        <div class="module-name">Designs</div>
+        <p class="module-desc">Living record of design decisions and Claude-authored mockups</p>
+      </div>
+      <div class="module-card">
+        <div class="module-name">Architecture</div>
+        <p class="module-desc">Sonny-powered graph views of every app project</p>
+      </div>
+      <div class="module-card">
+        <div class="module-name">Glossary</div>
+        <p class="module-desc">A navigable knowledge base of concepts and relationships</p>
+      </div>
+    </div>
+
+    <div class="hero-image nexus" aria-hidden="true"></div>
+
+    <section class="prose">
+      <h2><span class="num">01</span>Why it exists</h2>
+      <p>I was using Jira for personal project tracking. That sentence should explain itself. At the other extreme, a plain text file doesn't survive a multi-agent session where several things are moving at once. I needed something in between — something that understood my workflow, not the other way around.</p>
+      <p>What started as a simple ticket board grew into a full workflow hub as each gap became obvious. Reports needed a home. Design decisions needed a record. Architecture needed to be visible without opening Xcode. Eventually I had five tools in one interface, all talking to each other.</p>
+
+      <h2><span class="num">02</span>What I built</h2>
+      <p>Nexus runs locally as a Node.js server backed by plain JSON files. The ticket system handles multiple project spaces, full state transitions, comments, branches, and PR links — with auto-commits to a separate data repo so the code stays clean.</p>
+      <p>The reports hub is a themed viewer for everything Claude generates during a session: standups, post-mortems, swarm summaries, insights. Themes are first-class — a theme added today applies to every report ever written. The designs tab is where mockups and visual decisions live, so they don't get lost in chat history.</p>
+      <p>The architecture tab runs Sonny against any project and renders the result as a navigable graph — types, dependencies, relationships — without leaving the hub. The glossary is the same graph format, keeping concepts and their relationships explorable rather than buried in a document.</p>
+
+      <div class="callout">"The best tool is the one that disappears. Nexus isn't interesting — my projects are. It just tries to stay out of the way."</div>
+
+      <div class="stack">
+        <span class="pill">Node.js</span>
+        <span class="pill">Fastify</span>
+        <span class="pill">Vanilla JS</span>
+        <span class="pill">Sonny</span>
+        <span class="pill">JSON</span>
+        <span class="pill">Git</span>
+      </div>
+
+      <h2><span class="num">03</span>What's next</h2>
+      <p>Nexus evolves with my workflow. Each agent session that surfaces a gap becomes a ticket. It's a tool I use every day, which means it gets better every day.</p>
+    </section>
+  </article>
+
+  <nav class="next-nav" aria-label="Tools navigation">
+    <a href="/sonny/">
+      <div class="label">Next →</div>
+      <div class="title">Sonny</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 · RYAN SAUNDERS</span>
+  <span class="jab">You're viewing this in light mode — bold choice.</span>
+  <span>v26</span>
+</footer>
+
+</body>
+</html>
