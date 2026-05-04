@@ -28,7 +28,7 @@
     <header class="title-block">
       <div class="eyebrow">Tools · Built &amp; Running</div>
       <h1>Nexus</h1>
-      <p class="tag">My personal dev workflow hub. Tickets, reports, designs, architecture, and knowledge base — one interface, built to fit how I actually work.</p>
+      <p class="tag">My answer to Jira going down for a couple hours.</p>
       <div class="meta-grid">
         <div>Status<b class="running">● Running</b></div>
         <div>Year<b>2025 — 2026</b></div>
@@ -40,11 +40,11 @@
     <div class="module-strip">
       <div class="module-card">
         <div class="module-name">Tickets</div>
-        <p class="module-desc">Lightweight board and ticket system across all projects</p>
+        <p class="module-desc">Lightweight board and ticket system across all my projects</p>
       </div>
       <div class="module-card">
         <div class="module-name">Reports</div>
-        <p class="module-desc">Themed viewer for Claude session outputs — standups, post-mortems, insights</p>
+        <p class="module-desc">Themed viewer for reports from Claude Code.</p>
       </div>
       <div class="module-card">
         <div class="module-name">Designs</div>
@@ -52,11 +52,11 @@
       </div>
       <div class="module-card">
         <div class="module-name">Architecture</div>
-        <p class="module-desc">Sonny-powered graph views of every app project</p>
+        <p class="module-desc">Architectural graph of all projects, powered by <a href="../sonny/">Sonny</a></p>
       </div>
       <div class="module-card">
         <div class="module-name">Glossary</div>
-        <p class="module-desc">A navigable knowledge base of concepts and relationships</p>
+        <p class="module-desc">For when I forget things</p>
       </div>
     </div>
 
@@ -66,15 +66,14 @@
 
     <section class="prose">
       <h2><span class="num">01</span>Why it exists</h2>
-      <p>I was using Jira for personal project tracking. That sentence should explain itself. At the other extreme, a plain text file doesn't survive a multi-agent session where several things are moving at once. I needed something in between — something that understood my workflow, not the other way around.</p>
-      <p>What started as a simple ticket board grew into a full workflow hub as each gap became obvious. Reports needed a home. Design decisions needed a record. Architecture needed to be visible without opening Xcode. Eventually I had five tools in one interface, all talking to each other.</p>
+      <p>Because I learned to use Jira as part of my daily work routine years ago, setting it up for my personal projects seemed like a no-brainer. It was a good opportunity to test what I knew, and fill in the gaps of what I didn't. After a month of using it with Claude Code through the MCP, I saw some limitations, and some opportunities to streamline my own workflow.</p>
+      <p>I was also generating a lot of reports from Claude Code. Not just the specs and implementation plans, but agent session reports. Learnings from debugging and troubleshooting. Targeted investigations on best practices for new frameworks like Liquid Glass. I decided I should have something better than markdown files, and the result was the first iteration of Nexus- a report viewer with a theme picker. When Atlassian had a major outage one evening, I started wondering if I could build my own solution, chiselled down to just the parts I needed.</p>
+      <p>What started as a simple report viewer grew a ticket board, knowledge repo, design extension for Claude, and a full workflow hub as each gap became obvious.</p>
 
       <h2><span class="num">02</span>What I built</h2>
-      <p>Nexus runs locally as a Node.js server backed by plain JSON files. The ticket system handles multiple project spaces, full state transitions, comments, branches, and PR links — with auto-commits to a separate data repo so the code stays clean.</p>
-      <p>The reports hub is a themed viewer for everything Claude generates during a session: standups, post-mortems, swarm summaries, insights. Themes are first-class — a theme added today applies to every report ever written. The designs tab is where mockups and visual decisions live, so they don't get lost in chat history.</p>
-      <p>The architecture tab runs Sonny against any project and renders the result as a navigable graph — types, dependencies, relationships — without leaving the hub. The glossary is the same graph format, keeping concepts and their relationships explorable rather than buried in a document.</p>
-
-      <div class="callout">"The best tool is the one that disappears. Nexus isn't interesting — my projects are. It just tries to stay out of the way."</div>
+      <p>Nexus runs locally as a Node.js server backed by plain JSON files. The ticket system handles multiple project spaces, full state transitions, comments, branches, and PR links, with auto-commits to a separate data repo so the code stays clean.</p>
+      <p>The reports hub is a themed viewer for everything Claude generates during a session: standups, post-mortems, swarm summaries, insights. Additional themes are easily added according to the vibe of the day. A theme added today applies to every report and view in Nexus. The designs tab is where mockups and visual decisions live, so they don't get lost in chat history.</p>
+      <p>The architecture tab runs Sonny against any project and renders the result as a navigable graph showing types, dependencies and relationships without leaving the hub. The glossary is the same graph format, keeping concepts and their relationships explorable rather than buried in a document.</p>
 
       <div class="stack">
         <span class="pill">Node.js</span>
@@ -86,7 +85,7 @@
       </div>
 
       <h2><span class="num">03</span>What's next</h2>
-      <p>Nexus evolves with my workflow. Each agent session that surfaces a gap becomes a ticket. It's a tool I use every day, which means it gets better every day.</p>
+      <p>Nexus evolves with my workflow. Each agent session that surfaces a gap becomes a ticket. It's a tool I use every day, and it's rapidly evolving.</p>
     </section>
   </article>
 
