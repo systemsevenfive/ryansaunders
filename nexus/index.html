@@ -65,6 +65,32 @@
     </div>
 
     <section class="prose">
+      <h2><span class="num">00</span>What it is</h2>
+      <p>Nexus is a local workflow hub I built for my own projects. Tickets, reports, designs, an architecture viewer, and a knowledge graph, all served by one Node.js process over plain JSON files. More than a board, it is where the agent pipeline lives: brainstorm to spec to plan to test-first implementation to review, with every step visible and auditable.</p>
+
+      <div class="stack">
+        <span class="pill">Node.js</span>
+        <span class="pill">Fastify</span>
+        <span class="pill">Vanilla JS</span>
+        <span class="pill">JSON</span>
+        <span class="pill">Git</span>
+        <span class="pill">Claude Code</span>
+        <span class="pill">MCP</span>
+        <span class="pill">Sonny</span>
+      </div>
+
+      <ul class="feature-list">
+        <li>Multi-project ticket board with full state machine, atomic claim, and branch and PR links</li>
+        <li>Live Sessions view showing each active agent's current step, heartbeat, and alerts in real time</li>
+        <li>Themed Reports hub for standups, post-mortems, swarm summaries, and session reports</li>
+        <li>Designs tab as a stable home for Claude-authored mockups, linked to the ticket they belong to</li>
+        <li>Architecture tab driven by Sonny, refreshed daily across every project</li>
+        <li>Glossary that treats domain concepts as a navigable graph rather than a doc</li>
+        <li>Local-first storage: JSON files, no database, optional auto-commits to a separate data repo</li>
+        <li>Anchors a deliberate agent pipeline (brainstorm, spec, plan, TDD, friction-pattern review, PR) rather than free-form code generation</li>
+        <li>Self-healing swarm supervision: heartbeat monitoring, automatic restarts on stall, end-of-run HTML reports</li>
+      </ul>
+
       <h2><span class="num">01</span>Why it exists</h2>
       <p>Because I learned to use Jira as part of my daily work routine years ago, setting it up for my personal projects seemed like a no-brainer. It was a good opportunity to test what I knew, and fill in the gaps of what I didn't. After a month of using it with Claude Code through the MCP, I saw some limitations, and some opportunities to streamline my own workflow.</p>
       <p>I was also generating a lot of reports from Claude Code. Not just the specs and implementation plans, but agent session reports. Learnings from debugging and troubleshooting. Targeted investigations on best practices for new frameworks like Liquid Glass. I decided I should have something better than markdown files, and the result was the first iteration of Nexus- a report viewer with a theme picker. When Atlassian had a major outage one evening, I started wondering if I could build my own solution, chiselled down to just the parts I needed.</p>
@@ -74,15 +100,6 @@
       <p>Nexus runs locally as a Node.js server backed by plain JSON files. The ticket system handles multiple project spaces, full state transitions, comments, branches, and PR links, with auto-commits to a separate data repo so the code stays clean.</p>
       <p>The reports hub is a themed viewer for everything Claude generates during a session: standups, post-mortems, swarm summaries, insights. Additional themes are easily added according to the vibe of the day. A theme added today applies to every report and view in Nexus. The designs tab is where mockups and visual decisions live, so they don't get lost in chat history.</p>
       <p>The architecture tab runs Sonny against any project and renders the result as a navigable graph showing types, dependencies and relationships without leaving the hub. The glossary is the same graph format, keeping concepts and their relationships explorable rather than buried in a document.</p>
-
-      <div class="stack">
-        <span class="pill">Node.js</span>
-        <span class="pill">Fastify</span>
-        <span class="pill">Vanilla JS</span>
-        <span class="pill">Sonny</span>
-        <span class="pill">JSON</span>
-        <span class="pill">Git</span>
-      </div>
 
       <h2><span class="num">03</span>What's next</h2>
       <p>Nexus evolves with my workflow. Each agent session that surfaces a gap becomes a ticket. It's a tool I use every day, and it's rapidly evolving.</p>
