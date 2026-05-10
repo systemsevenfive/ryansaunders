@@ -954,6 +954,20 @@ a { color: inherit; }
 .title-block .meta-grid .running { color: var(--accent-violet); }
 .title-block .meta-grid .soon { color: #ff9f0a; }
 
+/* Platform icons (iPhone/iPad/Mac silhouettes in the meta-grid) */
+.title-block .meta-grid b.platforms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.platform-icon {
+  display: block;
+  width: auto;
+  height: 22px;
+  color: currentColor;
+  flex: none;
+}
+
 /* Light-mode contrast override for meta-grid status */
 @media (prefers-color-scheme: light) {
   .title-block .meta-grid .live { color: #1a7f3e; }
