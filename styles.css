@@ -1151,6 +1151,34 @@ a { color: inherit; }
   background: var(--surface);
 }
 
+/* Feature list (case-study overview bullets) */
+.feature-list {
+  list-style: none;
+  margin: 4px 0 28px;
+  padding: 0;
+  max-width: var(--max-prose);
+}
+.feature-list li {
+  position: relative;
+  padding: 10px 0 10px 24px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text);
+  border-bottom: 1px solid var(--rule);
+}
+.feature-list li:last-child { border-bottom: none; }
+.feature-list li::before {
+  content: "+";
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 /* Prev/Next */
 .next-nav {
   display: grid;
