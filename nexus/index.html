@@ -61,7 +61,23 @@
     </div>
 
     <div class="hero-image nexus">
-      <img class="hero-screenshot" src="/images/nexus/hero-1400.jpg" alt="The Nexus reports hub in the Aqua theme — report list on the left, session report content on the right.">
+      <div class="hero-reveal" data-reveal style="--reveal: 0.5; --hero-reveal-ratio: 1400 / 660;">
+        <picture class="hero-reveal__layer">
+          <source media="(prefers-color-scheme: light)" srcset="/images/nexus/hero-light-sessions-scaled.jpg">
+          <img src="/images/nexus/hero-dark-sessions-scaled.jpg" alt="Nexus sessions monitor: twelve agents in flight, color-coded by task age" draggable="false">
+        </picture>
+        <picture class="hero-reveal__layer hero-reveal__top">
+          <source media="(prefers-color-scheme: light)" srcset="/images/nexus/hero-light-tickets-scaled.jpg">
+          <img src="/images/nexus/hero-dark-tickets-scaled.jpg" alt="" draggable="false">
+        </picture>
+        <div class="hero-reveal__divider" aria-hidden="true"></div>
+        <button type="button" class="hero-reveal__handle"
+                role="slider"
+                aria-label="Drag to reveal the Nexus sessions monitor under the tickets board"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <span class="hero-reveal__handle-icon" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
 
     <section class="prose">
@@ -120,6 +136,67 @@
   <span class="jab">You're viewing this in light mode — bold choice.</span>
   <span>v26</span>
 </footer>
+
+<script>
+  (function () {
+    const reveal = document.querySelector('[data-reveal]');
+    if (!reveal) return;
+    const handle = reveal.querySelector('.hero-reveal__handle');
+    const step = 0.05;
+    let dragging = false;
+
+    function setReveal(v) {
+      const clamped = Math.max(0, Math.min(1, v));
+      reveal.style.setProperty('--reveal', clamped);
+      handle.setAttribute('aria-valuenow', Math.round(clamped * 100));
+    }
+
+    function positionFromEvent(e) {
+      const rect = reveal.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      return x / rect.width;
+    }
+
+    function startDrag(e) {
+      dragging = true;
+      reveal.dataset.dragging = 'true';
+      reveal.setPointerCapture?.(e.pointerId);
+      setReveal(positionFromEvent(e));
+      e.preventDefault();
+    }
+
+    function moveDrag(e) {
+      if (!dragging) return;
+      setReveal(positionFromEvent(e));
+    }
+
+    function endDrag(e) {
+      if (!dragging) return;
+      dragging = false;
+      reveal.dataset.dragging = 'false';
+      reveal.releasePointerCapture?.(e.pointerId);
+    }
+
+    reveal.addEventListener('pointerdown', startDrag);
+    reveal.addEventListener('pointermove', moveDrag);
+    reveal.addEventListener('pointercancel', endDrag);
+    reveal.addEventListener('pointerup', endDrag);
+
+    handle.addEventListener('keydown', (e) => {
+      const current = parseFloat(reveal.style.getPropertyValue('--reveal')) || 0.5;
+      let next = current;
+      switch (e.key) {
+        case 'ArrowLeft':  next = current - step; break;
+        case 'ArrowRight': next = current + step; break;
+        case 'Home':       next = 0; break;
+        case 'End':        next = 1; break;
+        default: return;
+      }
+      e.preventDefault();
+      setReveal(next);
+    });
+  })();
+</script>
 
 </body>
 </html>
