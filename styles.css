@@ -337,9 +337,29 @@ a { color: inherit; }
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .ship-tile:hover,
-.ship-tile:focus-visible {
+.ship-tile:has(.tile-overlay-link:focus-visible) {
   border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.tile-overlay-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.tile-store-link {
+  position: relative;
+  z-index: 2;
+  color: var(--text-faint);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tile-store-link:hover {
+  color: var(--accent);
 }
 
 .ship-tile .icon {

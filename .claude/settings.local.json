@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.claude/swarm-runs/card-v1-20260510-2143/tickets/CARD-40)",
+      "Bash(bash ~/.claude/skills/swarm-supervisor/hooks/swarm-mark register ~/.claude/swarm-runs/card-v1-20260510-2143/tickets/CARD-40)"
+    ]
+  }
+}
