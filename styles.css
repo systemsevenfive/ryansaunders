@@ -415,6 +415,13 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.spotlight-body:hover,
+.spotlight-body:has(.tile-overlay-link:focus-visible) {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .spotlight-body::before {
@@ -501,6 +508,8 @@ a { color: inherit; }
 .spotlight-status { color: var(--accent-cyan); }
 
 .spotlight-link {
+  position: relative;
+  z-index: 2;
   margin-left: auto;
   color: var(--accent-cyan);
   text-decoration: none;
