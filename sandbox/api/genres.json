@@ -1,0 +1,96 @@
+{
+  "genres": [
+    {
+      "id": "abb8ebc9-62d8-4679-baee-7cef66a4913e",
+      "name": "Action"
+    },
+    {
+      "id": "fded42b9-457b-4d9a-a773-0cb04de8706f",
+      "name": "Adventure"
+    },
+    {
+      "id": "17413fca-c880-47fa-b580-21f491d8fb79",
+      "name": "Animation"
+    },
+    {
+      "id": "610bbdbd-cb0b-4187-bd72-25845fba4991",
+      "name": "Biography"
+    },
+    {
+      "id": "964893ad-10fa-4822-b972-1d2b378c013b",
+      "name": "Comedy"
+    },
+    {
+      "id": "00e28dff-4d86-4a01-9c1a-4619ebaee59b",
+      "name": "Crime"
+    },
+    {
+      "id": "65e0b694-7718-4194-bc27-35cb6ae93208",
+      "name": "Disaster"
+    },
+    {
+      "id": "e1377da9-e6df-40bd-8387-fd0fde8aa769",
+      "name": "Drama"
+    },
+    {
+      "id": "93c32439-b8f0-451b-9784-c0390d651dd2",
+      "name": "Family"
+    },
+    {
+      "id": "121d2ebf-6ee8-4140-b6b4-8bcea00d58b8",
+      "name": "Fantasy"
+    },
+    {
+      "id": "576e23e8-fb8c-427d-b523-05dfd59c32d8",
+      "name": "History"
+    },
+    {
+      "id": "9065a53d-ee1d-4e52-b2f7-6d13588ba844",
+      "name": "Horror"
+    },
+    {
+      "id": "cc43a670-b9e4-42f0-9448-0ba6840e6cea",
+      "name": "Legal"
+    },
+    {
+      "id": "3ba31875-8e1c-4590-835c-7239ce3f5010",
+      "name": "Musical"
+    },
+    {
+      "id": "83262212-5213-45cb-ba94-38ce95009229",
+      "name": "Mystery"
+    },
+    {
+      "id": "02f69a17-54d1-46a4-b594-1d2279793989",
+      "name": "Psychological"
+    },
+    {
+      "id": "06305d1b-b978-448f-ac54-ca632aaaaa57",
+      "name": "Romance"
+    },
+    {
+      "id": "4f0eb1ef-b81c-4933-9110-2cf5c23775be",
+      "name": "Science Fiction"
+    },
+    {
+      "id": "5b068180-9959-4534-a240-731a04eb5515",
+      "name": "Sports"
+    },
+    {
+      "id": "ba809a2f-9e21-4b73-a9bf-488b88b68727",
+      "name": "Superhero"
+    },
+    {
+      "id": "312cb4f9-9181-4162-a2fa-6845064f8347",
+      "name": "Thriller"
+    },
+    {
+      "id": "3b3aac0a-cbd0-4abe-9496-f9795af10aff",
+      "name": "War"
+    },
+    {
+      "id": "1b7489de-bf91-4316-ae38-4f93eab8d5bb",
+      "name": "Western"
+    }
+  ]
+}
