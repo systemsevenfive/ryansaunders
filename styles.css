@@ -1330,55 +1330,11 @@ a { color: inherit; }
   position: relative;
   overflow: hidden;
 }
-.mini-flow {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  row-gap: 8px;
-  margin-bottom: 16px;
-}
-.mini-node {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.mini-node .tool-name {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text);
-}
-.mini-node .tool-role {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: var(--text-faint);
-  letter-spacing: 0.06em;
-}
-.mini-node.placeholder-node { opacity: 0.4; }
-.mini-arrow {
-  color: var(--accent-violet);
-  font-size: 12px;
-  padding: 0 12px;
-  flex-shrink: 0;
-  opacity: 0.5;
-  margin-top: 2px;
-}
-.mini-gate-badge {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 8px;
-  letter-spacing: 0.04em;
-  color: var(--accent-cyan);
-  border: 1px solid rgba(0, 200, 255, 0.3);
-  background: rgba(0, 200, 255, 0.08);
-  border-radius: var(--r-sm);
-  padding: 1px 5px;
-}
 .callout-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
-  border-top: 0.5px solid var(--rule);
+  gap: 16px;
 }
 .callout-footer p {
   font-size: 13px;
