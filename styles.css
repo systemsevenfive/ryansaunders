@@ -307,12 +307,11 @@ a { color: inherit; }
   color: inherit;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 .ship-tile:hover,
 .ship-tile:has(.tile-overlay-link:focus-visible) {
   border-color: var(--accent);
-  transform: translateY(-2px);
 }
 
 .tile-overlay-link {
@@ -382,13 +381,12 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 
 .spotlight-body:hover,
 .spotlight-body:has(.tile-overlay-link:focus-visible) {
   border-color: var(--accent);
-  transform: translateY(-2px);
 }
 
 
@@ -523,12 +521,11 @@ a { color: inherit; }
   color: inherit;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 .tool-tile:hover,
 .tool-tile:focus-visible {
-  border-color: var(--rule-strong);
-  transform: translateY(-2px);
+  border-color: var(--accent);
 }
 
 .tool-tile .monogram {
@@ -623,7 +620,7 @@ a { color: inherit; }
 }
 .lab-tile:hover,
 .lab-tile:focus-visible {
-  border-color: var(--rule-strong);
+  border-color: var(--accent);
   background: var(--surface);
 }
 
@@ -811,10 +808,10 @@ a { color: inherit; }
   font-weight: 600;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.2s ease;
+  transition: background 0.2s ease, opacity 0.2s ease;
 }
 .btn.primary { background: var(--text); color: var(--bg); }
-.btn.primary:hover { transform: translateY(-1px); }
+.btn.primary:hover { opacity: 0.85; }
 .btn.ghost { color: var(--text); border-color: var(--rule-strong); background: transparent; }
 .btn.ghost:hover { border-color: var(--text); }
 
@@ -1319,9 +1316,9 @@ a { color: inherit; }
   border: 1px solid transparent;
   border-radius: var(--r-sm);
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.2s ease;
+  transition: background 0.2s ease, opacity 0.2s ease;
 }
-.submit-button:hover { transform: translateY(-1px); }
+.submit-button:hover { opacity: 0.85; }
 
 /* ========== AI workflow callout (homepage) ========== */
 
