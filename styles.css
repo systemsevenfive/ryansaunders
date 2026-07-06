@@ -78,6 +78,8 @@ h1, h2, h3 { font-size: 15px; font-weight: bold; letter-spacing: 0.08em; }
   margin: 0 auto;
   padding: 32px 20px 48px;
 }
+/* Subpages (article-based) read as a narrower centered column; text stays left-aligned */
+.page:has(> article) { max-width: 860px; }
 section, article { scroll-margin-top: 72px; }
 
 .page-head h1 { text-transform: uppercase; }
@@ -160,6 +162,20 @@ figcaption { color: var(--text-dim); margin-top: 0.4em; font-size: 13px; }
 .flow-arrow::after { content: ">"; }
 .gate-badge { background: var(--text); color: var(--bg); padding: 0 6px; font-size: 13px; }
 .flow-caption { color: var(--text-dim); margin-top: 1em; }
+
+.flow + .card-label { margin-top: 1.5em; }
+
+/* Detail variant (about page): equal-width nodes, left-aligned sentences */
+.flow-detail { align-items: stretch; margin: 1.5em 0; }
+.flow-detail .flow-node { flex: 1 1 0; min-width: 0; text-align: left; }
+.flow-detail .flow-node .tool-role { margin-top: 0.3em; }
+.flow-detail .flow-arrow { flex: 0 0 5ch; align-self: center; }
+@media (max-width: 899px) {
+  .flow-detail { flex-direction: column; }
+  .flow-detail .flow-arrow { flex: none; justify-content: center; min-width: 0; }
+  .flow-detail .flow-arrow::before { content: "↓"; flex: none; }
+  .flow-detail .flow-arrow::after { content: none; }
+}
 @media (max-width: 719px) {
   .flow { flex-direction: column; align-items: stretch; }
   .flow-arrow { justify-content: center; min-width: 0; }
@@ -191,6 +207,158 @@ button, .btn {
 }
 button:hover, .btn:hover { background: var(--text); color: var(--bg); }
 .btn.ghost { border-color: var(--rule); }
+
+/* ==========================================================================
+   Subpage template (crumb / title-block / prose / next-nav)
+   ========================================================================== */
+.crumb { color: var(--text-dim); margin-bottom: 2em; }
+.crumb a { color: var(--text-dim); }
+
+.title-block { margin-bottom: 1.5em; }
+.title-block .eyebrow { color: var(--text-dim); font-size: 13px; }
+.title-block h1 { text-transform: uppercase; overflow: hidden; }
+.title-block h1::after {
+  content: "================================================================================================================================================================================================";
+  display: block; white-space: nowrap; color: var(--rule);
+  font-weight: normal; letter-spacing: normal; margin-bottom: 0.4em;
+}
+.title-block .tag { max-width: 72ch; }
+
+.meta-grid { display: flex; flex-wrap: wrap; gap: 0.5em 4ch; margin-top: 1em; }
+.meta-grid > div { display: flex; flex-direction: column; color: var(--text-dim); font-size: 13px; }
+.meta-grid b { font-size: 15px; color: var(--text); }
+.platforms { display: inline-flex; align-items: center; gap: 6px; }
+.platform-icon { height: 16px; width: auto; }
+
+.prose p { max-width: 72ch; margin: 0.9em 0; }
+.prose ul { list-style: none; max-width: 72ch; margin: 0.9em 0; }
+.prose ul li { margin: 0.35em 0; }
+.prose ul li::before { content: "* "; }
+
+.callout { border: 1px dashed var(--rule); padding: 14px 18px; margin: 1.5em 0; color: var(--text-dim); }
+
+.stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 1em 0; }
+.pill { border: 1px solid var(--rule); padding: 1px 10px; font-size: 13px; color: var(--text-dim); }
+
+.feature-list { list-style: none; margin: 1em 0; }
+.feature-list li { margin: 0.5em 0; }
+.feature-list li::before { content: "* "; color: var(--text-dim); }
+
+.next-nav {
+  display: flex; justify-content: space-between; gap: 2ch; flex-wrap: wrap;
+  margin-top: 3em; padding-top: 1em;
+  border-top: 1px dashed var(--rule);
+}
+.next-nav a { text-decoration: none; }
+.next-nav a:hover { background: none; color: inherit; }
+.next-nav a:hover .title { background: var(--text); color: var(--bg); }
+.next-nav .label { color: var(--text-dim); font-size: 13px; }
+.next-nav .title { text-decoration: underline; }
+
+/* ---- Case-study hero image ---- */
+.hero-image { margin: 1.6em 0 2em; }
+.hero-image img, .hero-screenshot { display: block; width: 100%; height: auto; border: 1px solid var(--img-border); }
+.hero-image figcaption { color: var(--text-dim); margin-top: 0.4em; font-size: 13px; }
+
+/* ---- Hero reveal slider (kitchensynk, nexus) ---- */
+.hero-image:has(.hero-reveal) { aspect-ratio: auto; display: block; background: none; }
+.hero-reveal {
+  position: relative;
+  aspect-ratio: var(--hero-reveal-ratio, 2752 / 1104);
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  --handle-size: 40px;
+  border: 1px solid var(--img-border);
+}
+.hero-reveal__layer { position: absolute; inset: 0; display: block; }
+.hero-reveal__layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  border: none;
+}
+.hero-reveal__top { clip-path: inset(0 0 0 calc(var(--reveal) * 100%)); }
+.hero-reveal__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--reveal) * 100%);
+  width: 2px;
+  margin-left: -1px;
+  background: var(--bg);
+  pointer-events: none;
+}
+.hero-reveal__handle {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--reveal) * 100%);
+  width: var(--handle-size);
+  height: var(--handle-size);
+  margin: calc(var(--handle-size) / -2) 0 0 calc(var(--handle-size) / -2);
+  border: 1px solid var(--text);
+  background: var(--bg);
+  color: var(--text);
+  cursor: ew-resize;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  font-family: inherit;
+  font-size: 13px;
+}
+.hero-reveal__handle::before { content: "<>"; }
+.hero-reveal__handle:hover { background: var(--bg); color: var(--text); }
+.hero-reveal__handle:focus-visible { outline: 1px solid var(--text); outline-offset: 3px; }
+.hero-reveal__handle-icon { display: none; }
+.hero-reveal[data-dragging="true"], .hero-reveal[data-dragging="true"] .hero-reveal__handle { cursor: grabbing; }
+
+/* ---- Nexus module strip ---- */
+.module-strip { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 1.5em 0; }
+@media (min-width: 720px) { .module-strip { grid-template-columns: repeat(5, 1fr); } }
+.module-card { border: 1px solid var(--rule); padding: 10px 12px; }
+.module-card .module-name { font-weight: bold; }
+.module-card .module-desc { color: var(--text-dim); font-size: 13px; }
+
+/* ---- Neon Arcade game cards ---- */
+.arcade-games { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 1.5em 0; }
+@media (min-width: 720px) { .arcade-games { grid-template-columns: repeat(2, 1fr); } }
+.arcade-game { border: 1px solid var(--rule); padding: 18px 18px 14px; }
+.arcade-game-inspo { color: var(--text-dim); font-size: 13px; }
+.arcade-game-title { font-weight: bold; }
+.arcade-game-desc { color: var(--text-dim); }
+.arcade-game-meta { margin-top: 1em; padding-top: 0.6em; border-top: 1px dashed var(--rule); color: var(--text-dim); font-size: 13px; }
+
+/* ---- Privacy / contact boilerplate ---- */
+.privacy-container, .contact-container { max-width: 72ch; margin: 0 auto; }
+.privacy-content h1, .contact-content h1 { text-transform: uppercase; overflow: hidden; }
+.privacy-content h1::after, .contact-content h1::after {
+  content: "================================================================================================================================================================================================";
+  display: block; white-space: nowrap; color: var(--rule);
+  font-weight: normal; letter-spacing: normal; margin-bottom: 0.4em;
+}
+.privacy-content h2 { margin-top: 2em; }
+.privacy-content p, .privacy-content ul { margin: 0.9em 0; }
+.privacy-content ul { list-style: none; }
+.privacy-content ul li::before { content: "* "; }
+.last-updated { color: var(--text-dim); font-size: 13px; }
+.button-container { margin: 1.5em 0; }
+.back-link { color: var(--text-dim); }
+.form-group { margin-top: 1em; }
+.form-group label { margin-top: 0; }
+.submit-button {
+  font-family: inherit; font-size: inherit;
+  background: var(--bg); color: var(--text);
+  border: 1px solid var(--text);
+  padding: 6px 16px; margin-top: 1em; cursor: pointer;
+}
+.submit-button:hover { background: var(--text); color: var(--bg); }
 
 /* ---- Footer ------------------------------------------------------------------------ */
 .foot {

@@ -10,13 +10,13 @@
 <body>
 
 <nav class="nav" aria-label="Primary">
-  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>Ryan Saunders</a>
+  <a href="/" class="brand">Ryan Saunders</a>
   <div class="links">
-    <a href="/#shipped">Work</a>
-    <a href="/#tools">Tools</a>
-    <a href="/#lab">Lab</a>
-    <a href="/about/" aria-current="page">About</a>
-    <a href="/#contact">Contact</a>
+    <a href="/">home</a>
+    <a href="/nexus/">nexus</a>
+    <a href="/#lab">lab</a>
+    <a href="/about/" aria-current="page">about</a>
+    <a href="/#contact">contact</a>
   </div>
 </nav>
 
@@ -43,29 +43,31 @@
       <p>At work, I follow the standards of AI development set down by my organization, while contributing to new and existing skills for our AI agents. At home, I pursue an even more aggressive AI automation pipeline, using Nexus as  my Jira-replacement to manage my tickets no matter how vaguely-defined. Some projects I review manually, eithers are almost fully-automated down to the final merge.</p>
 
 
-      <div class="flow-wrap">
+      <div class="flow flow-detail">
         <div class="flow-node">
-          <div class="flow-eyebrow">Nexus</div>
-          <h3>Ticket</h3>
-          <p class="flow-role">Ticket and AC written first. No code written without a ticket.</p>
+          <span class="card-label">nexus</span>
+          <span class="tool-name">ticket</span>
+          <span class="tool-role">Ticket and AC written first. No code written without a ticket.</span>
         </div>
+        <span class="flow-arrow" aria-hidden="true"></span>
         <div class="flow-node">
-          <div class="flow-eyebrow">Claude</div>
-          <h3>Agent</h3>
-          <p class="flow-role">Picks up the ticket, writes the implementation, opens a draft PR.</p>
+          <span class="card-label">claude</span>
+          <span class="tool-name">agent</span>
+          <span class="tool-role">Picks up the ticket, writes the implementation, opens a draft PR.</span>
         </div>
-        <div class="flow-node gate">
-          <div class="flow-eyebrow">Xcode · Git</div>
-          <h3>Gate</h3>
-          <p class="flow-role">Build passes. Tests pass. Formatting is clean.</p>
-          <span class="gate-tag">Required</span>
-        </div>
+        <span class="flow-arrow" aria-hidden="true"></span>
         <div class="flow-node">
-          <div class="flow-eyebrow">GitHub</div>
-          <h3>Review</h3>
-          <p class="flow-role">I read every diff. Architecture decisions stay mine.</p>
+          <span class="card-label">xcode · git</span>
+          <span class="tool-name">gate</span>
+          <span class="tool-role">Build passes. Tests pass. Formatting is clean.</span>
+          <span class="tool-role"><span class="gate-badge">required</span></span>
         </div>
-
+        <span class="flow-arrow" aria-hidden="true"></span>
+        <div class="flow-node">
+          <span class="card-label">github</span>
+          <span class="tool-name">review</span>
+          <span class="tool-role">I read every diff. Architecture decisions stay mine.</span>
+        </div>
       </div>
     </section>
 
