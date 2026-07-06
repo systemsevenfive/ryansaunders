@@ -10,158 +10,148 @@
 <body>
 
 <nav class="nav" aria-label="Primary">
-  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>Ryan Saunders</a>
+  <a href="/" class="brand">Ryan Saunders</a>
   <div class="links">
-    <a href="#shipped" aria-current="page">Work</a>
-    <a href="#tools">Tools</a>
-    <a href="#lab">Lab</a>
-    <a href="/about/">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#shipped">work</a>
+    <a href="#nexus">nexus</a>
+    <a href="#lab">lab</a>
+    <a href="/about/">about</a>
+    <a href="#contact">contact</a>
   </div>
 </nav>
 
 <main class="page">
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="eyebrow"><span class="chip">v26</span>iOS · tools · systems</div>
+  <header class="page-head">
     <h1>Ryan Saunders</h1>
-    <p class="lede">I build small, useful iOS apps — and the tools that ship them.</p>
-    <div class="meta"><span><b>3</b> shipped</span><span>Canada / remote</span></div>
-  </section>
-
-  <!-- Shipped -->
-  <header class="sec-head">
-    <h2><span class="num">01</span>Shipped</h2>
-    <span class="sec-note">Live on the App Store</span>
+    <div class="rule-heavy" aria-hidden="true"></div>
+    <p class="tagline">iOS developer. Canada / remote.</p>
+    <p class="tagline">I build small, useful iOS apps — and the tools that ship them.</p>
   </header>
-  <section class="shipped" id="shipped">
-    <div class="ship-tile integenius">
-      <img class="icon" src="/images/icons/integenius-80.png" alt="" aria-hidden="true">
-      <h3>Integenius</h3>
-      <p class="sub">Arithmetic flash cards for the iPad generation. Three major releases of personal SwiftUI practice.</p>
-      <div class="tile-foot">
-        <span class="status live">● Live</span>
-        <span>v3 April '26</span>
-        <a class="tile-store-link" href="https://apps.apple.com/ca/app/integenius/id6471911678" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-      </div>
-      <a class="tile-overlay-link" href="/integenius/" aria-label="View Integenius"></a>
-    </div>
-    <div class="ship-tile kt">
-      <img class="icon" src="/images/icons/kitchensynkv2-80.jpg" alt="" aria-hidden="true">
-      <h3>Kitchen Synk</h3>
-      <p class="sub">An alternative to the built-in iOS Timer app, for those cooks using every burner.</p>
-      <div class="tile-foot">
-        <span class="status live">● Live</span>
-        <span>v2 spring '26</span>
-        <a class="tile-store-link" href="https://apps.apple.com/us/app/kitchen-synk/id6755136814" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-      </div>
-      <a class="tile-overlay-link" href="/kitchensynk/" aria-label="View Kitchen Synk"></a>
-    </div>
-    <div class="ship-tile sz">
-      <img class="icon" src="/images/icons/solitairezero-80.png" alt="" aria-hidden="true">
-      <h3>Solitaire Zero</h3>
-      <p class="sub">Because sometimes you just want to play solitaire with no fuss.</p>
-      <div class="tile-foot">
-        <span class="status live">● Live</span>
-        <span>v1 · 2026</span>
-        <a class="tile-store-link" href="https://apps.apple.com/us/app/solitaire-zero/id6760957963" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-      </div>
-      <a class="tile-overlay-link" href="/solitairezero/" aria-label="View Solitaire Zero"></a>
-    </div>
-  </section>
 
-  <!-- Nexus -->
-  <header class="sec-head" id="tools">
-    <h2><span class="num">02</span>Nexus</h2>
-    <span class="sec-note">Built &amp; running</span>
-  </header>
-  <section class="spotlight-section">
-    <div class="spotlight-body">
-      <div class="spotlight-text">
-        <div class="spotlight-monogram">N</div>
-        <h3>Nexus</h3>
-        <p class="sub">Homegrown project management for my AI workflows</p>
-        <div class="spotlight-tags">
-          <span class="spotlight-tag">Ticket Management</span>
-          <span class="spotlight-tag">Architecture</span>
-          <span class="spotlight-tag">Report Management</span>
-          <span class="spotlight-tag">Live Agent View</span>
+  <section id="shipped">
+    <h2>SHIPPED</h2>
+    <div class="card-grid">
+      <div class="ship-card">
+        <div class="ship-head">
+          <img src="/images/icons/integenius-80.png" alt="" aria-hidden="true">
+          <h3><a href="/integenius/">integenius</a></h3>
         </div>
-        <div class="spotlight-foot">
-          <span class="spotlight-status">● Running</span>
-          <span>Node.js · Fastify · Vanilla JS</span>
-          <a class="spotlight-link" href="/nexus/">View Nexus →</a>
+        <p class="sub">Arithmetic flash cards for the iPad generation.</p>
+        <div class="ship-foot">
+          <span>● live · v3 apr '26</span>
+          <a class="store" href="https://apps.apple.com/ca/app/integenius/id6471911678" target="_blank" rel="noopener noreferrer">[app store]</a>
         </div>
       </div>
-      <div class="spotlight-visual">
+      <div class="ship-card">
+        <div class="ship-head">
+          <img src="/images/icons/kitchensynkv2-80.jpg" alt="" aria-hidden="true">
+          <h3><a href="/kitchensynk/">kitchen synk</a></h3>
+        </div>
+        <p class="sub">An alternative to the built-in iOS Timer app, for those cooks using every burner.</p>
+        <div class="ship-foot">
+          <span>● live · v2 spring '26</span>
+          <a class="store" href="https://apps.apple.com/us/app/kitchen-synk/id6755136814" target="_blank" rel="noopener noreferrer">[app store]</a>
+        </div>
+      </div>
+      <div class="ship-card">
+        <div class="ship-head">
+          <img src="/images/icons/solitairezero-80.png" alt="" aria-hidden="true">
+          <h3><a href="/solitairezero/">solitaire zero</a></h3>
+        </div>
+        <p class="sub">Because sometimes you just want to play solitaire with no fuss.</p>
+        <div class="ship-foot">
+          <span>● live · v1 2026</span>
+          <a class="store" href="https://apps.apple.com/us/app/solitaire-zero/id6760957963" target="_blank" rel="noopener noreferrer">[app store]</a>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <picture>
+        <source media="(prefers-color-scheme: light)" srcset="/images/kitchensynk/hero-light-color-scaled.jpg">
+        <img src="/images/kitchensynk/hero-dark-color-scaled.jpg" alt="Kitchen Synk running four timers at once">
+      </picture>
+      <figcaption>fig 1. kitchen synk — every burner accounted for</figcaption>
+    </figure>
+  </section>
+
+  <section id="nexus">
+    <h2>NEXUS</h2>
+    <div class="split">
+      <div class="entry">
+        <div class="entry-line">
+          <a href="/nexus/">nexus</a>
+          <span class="leader" aria-hidden="true"></span>
+          <span class="status">built &amp; running</span>
+        </div>
+        <p class="sub">Homegrown project management for my AI workflows. Tickets, reports, live agent view.</p>
+        <p class="sub">node.js · fastify · vanilla js</p>
+      </div>
+      <figure>
         <picture>
           <source media="(prefers-color-scheme: light)" srcset="/images/nexus/hero-light-sessions-scaled.jpg">
-          <img class="spotlight-screenshot" src="/images/nexus/hero-dark-sessions-scaled.jpg" alt="Nexus sessions monitor: twelve agents in flight, color-coded by task age">
+          <img src="/images/nexus/hero-dark-sessions-scaled.jpg" alt="Nexus sessions monitor: twelve agents in flight, color-coded by task age">
         </picture>
-      </div>
-      <a class="tile-overlay-link" href="/nexus/" aria-label="View Nexus"></a>
+        <figcaption>fig 2. nexus session monitor — twelve agents in flight</figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- Lab -->
-  <header class="sec-head">
-    <h2><span class="num">03</span>In The Lab</h2>
-    <span class="sec-note">In progress · prototypes</span>
-  </header>
-  <section class="lab" id="lab">
-    <a class="lab-tile" href="/edassists/">
-      <div class="label">EXP-001 · TOOL</div>
-      <h3>Ed Assists</h3>
-      <p class="sub">Ed would like to Assist the video editors of the world.</p>
-      <div class="bottom">PROTOTYPE</div>
-    </a>
-    <a class="lab-tile" href="/cardinal/">
-      <div class="label">EXP-004 · TOOL</div>
-      <h3>Cardinal: Business Card Organizer</h3>
-      <p class="sub">The missing link between Contacts and Calendars, supporting Outlook and iCloud.</p>
-      <div class="bottom">TINKERING</div>
-    </a>
-    <a class="lab-tile neon-arcade" href="/neon-arcade/">
-      <div class="label">ARCADE · GAMES</div>
-      <h3>The Neon Arcade</h3>
-      <p class="sub">Where I explore and pay homage to the classics, in Swift.</p>
-      <div class="bottom">IN DEVELOPMENT</div>
-    </a>
-  </section>
-
-  <!-- AI Stuff -->
-  <header class="sec-head">
-    <h2><span class="num">04</span>AI Stuff</h2>
-  </header>
-  <section class="about-teaser">
-    <div class="ai-callout">
-      <div class="callout-footer">
-        <p>Multi-agent workflow, human-reviewed — I read every diff.</p>
-        <a href="/about/">About →</a>
+  <section id="lab">
+    <h2>IN THE LAB</h2>
+    <div class="card-grid">
+      <div class="ship-card">
+        <p class="card-label">exp-001 · tool</p>
+        <div class="ship-head">
+          <h3><a href="/edassists/">ed assists</a></h3>
+        </div>
+        <p class="sub">Ed would like to Assist the video editors of the world.</p>
+        <div class="ship-foot"><span>○ prototype</span></div>
+      </div>
+      <div class="ship-card">
+        <p class="card-label">exp-004 · tool</p>
+        <div class="ship-head">
+          <h3><a href="/cardinal/">cardinal</a></h3>
+        </div>
+        <p class="sub">The missing link between Contacts and Calendars.</p>
+        <div class="ship-foot"><span>○ tinkering</span></div>
+      </div>
+      <div class="ship-card">
+        <p class="card-label">arcade · games</p>
+        <div class="ship-head">
+          <h3><a href="/neon-arcade/">the neon arcade</a></h3>
+        </div>
+        <p class="sub">Where I explore and pay homage to the classics, in Swift.</p>
+        <div class="ship-foot"><span>○ in development</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <header class="sec-head" id="contact">
-    <h2><span class="num">05</span>Contact</h2>
-  </header>
-  <section class="contact">
-    <div class="contact-actions">
-      <a class="btn primary" href="#contact-form">Get in touch</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/systemseven/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <section id="ai">
+    <h2>AI STUFF</h2>
+    <div class="flow">
+      <div class="flow-node"><span class="tool-name">nexus</span><span class="tool-role">tickets</span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node"><span class="tool-name">claude</span><span class="tool-role">agents</span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node"><span class="tool-name">xcode · git</span><span class="tool-role"><span class="gate-badge">gate</span></span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node"><span class="tool-name">review</span><span class="tool-role">every diff</span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node flow-placeholder"><span class="tool-name">local llms</span><span class="tool-role">in progress</span></div>
     </div>
-    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mvgyazvd" method="POST">
-      <div class="form-row">
-        <label for="email">Your email</label>
-        <input type="email" name="email" id="email" required autocomplete="email">
-      </div>
-      <div class="form-row">
-        <label for="message">Your message</label>
-        <textarea name="message" id="message" required rows="5"></textarea>
-      </div>
-      <button type="submit" class="btn primary">Send</button>
+    <p class="flow-caption">Multi-agent workflow, human-reviewed — I read every diff. <a href="/about/">more →</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>CONTACT</h2>
+    <p>[<a href="https://www.linkedin.com/in/systemseven/" target="_blank" rel="noopener noreferrer">linkedin</a>]</p>
+    <form class="contact-form" action="https://formspree.io/f/mvgyazvd" method="POST">
+      <label for="email">your email</label>
+      <input type="email" name="email" id="email" required autocomplete="email">
+      <label for="message">your message</label>
+      <textarea name="message" id="message" required rows="5"></textarea>
+      <button type="submit">send &gt;</button>
     </form>
   </section>
 
@@ -170,20 +160,7 @@
 <footer class="foot">
   <span>© 2026 · Ryan Saunders</span>
   <span class="jab">I added light mode. I'm not happy about it, but I did it.</span>
-  <span>v26</span>
 </footer>
-
-<script>
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href');
-      if (id.length < 2) return;
-      const t = document.querySelector(id);
-      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' }); }
-    });
-  });
-</script>
 
 </body>
 </html>
