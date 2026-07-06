@@ -13,7 +13,7 @@
   <a href="/" class="brand">Ryan Saunders</a>
   <div class="links">
     <a href="#shipped">work</a>
-    <a href="#nexus">nexus</a>
+    <a href="/nexus/">nexus</a>
     <a href="#lab">lab</a>
     <a href="/about/">about</a>
     <a href="#contact">contact</a>
@@ -66,13 +66,6 @@
         </div>
       </div>
     </div>
-    <figure>
-      <picture>
-        <source media="(prefers-color-scheme: light)" srcset="/images/kitchensynk/hero-light-color-scaled.jpg">
-        <img src="/images/kitchensynk/hero-dark-color-scaled.jpg" alt="Kitchen Synk running four timers at once">
-      </picture>
-      <figcaption>fig 1. kitchen synk — every burner accounted for</figcaption>
-    </figure>
   </section>
 
   <section id="nexus">
@@ -92,7 +85,7 @@
           <source media="(prefers-color-scheme: light)" srcset="/images/nexus/hero-light-sessions-scaled.jpg">
           <img src="/images/nexus/hero-dark-sessions-scaled.jpg" alt="Nexus sessions monitor: twelve agents in flight, color-coded by task age">
         </picture>
-        <figcaption>fig 2. nexus session monitor — twelve agents in flight</figcaption>
+        <figcaption>fig 1. nexus session monitor — twelve agents in flight</figcaption>
       </figure>
     </div>
   </section>
@@ -129,6 +122,7 @@
 
   <section id="ai">
     <h2>AI STUFF</h2>
+    <p class="card-label">now</p>
     <div class="flow">
       <div class="flow-node"><span class="tool-name">nexus</span><span class="tool-role">tickets</span></div>
       <span class="flow-arrow" aria-hidden="true"></span>
@@ -137,8 +131,18 @@
       <div class="flow-node"><span class="tool-name">xcode · git</span><span class="tool-role"><span class="gate-badge">gate</span></span></div>
       <span class="flow-arrow" aria-hidden="true"></span>
       <div class="flow-node"><span class="tool-name">review</span><span class="tool-role">every diff</span></div>
+    </div>
+    <p class="card-label">next</p>
+    <div class="flow">
+      <div class="flow-node"><span class="tool-name">nexus</span><span class="tool-role">tickets</span></div>
       <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node flow-placeholder"><span class="tool-name">local llms</span><span class="tool-role">in progress</span></div>
+      <div class="flow-node"><span class="tool-name">claude</span><span class="tool-role">designs · specs · plans</span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node flow-placeholder"><span class="tool-name">local llms</span><span class="tool-role">implementation · routine</span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node"><span class="tool-name">xcode · git</span><span class="tool-role"><span class="gate-badge">gate</span></span></div>
+      <span class="flow-arrow" aria-hidden="true"></span>
+      <div class="flow-node"><span class="tool-name">review</span><span class="tool-role">every diff</span></div>
     </div>
     <p class="flow-caption">Multi-agent workflow, human-reviewed — I read every diff. <a href="/about/">more →</a></p>
   </section>
