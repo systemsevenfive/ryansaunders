@@ -8,7 +8,8 @@
       "Bash(mkdir -p ~/.claude/swarm-runs/card-design-20260511-0217/tickets/CARD-53)",
       "Bash(mkdir -p ~/.claude/swarm-runs/card-design-20260511-0217/tickets/CARD-41)",
       "Bash(mkdir -p ~/.claude/swarm-runs/card-design-20260511-0230/tickets/CARD-43)",
-      "Bash(bash ~/.claude/skills/swarm-supervisor/hooks/swarm-mark register ~/.claude/swarm-runs/card-design-20260511-0230/tickets/CARD-43)"
+      "Bash(bash ~/.claude/skills/swarm-supervisor/hooks/swarm-mark register ~/.claude/swarm-runs/card-design-20260511-0230/tickets/CARD-43)",
+      "Bash(/Users/ryansaunders/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/brainstorming/scripts/start-server.sh --project-dir /Users/ryansaunders/Desktop/Dev/Websites/ryansaunders)"
     ]
   }
 }
