@@ -4,166 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Saunders — iOS Developer</title>
-  <meta name="description" content="iOS developer.">
+  <meta name="description" content="">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<nav class="nav" aria-label="Primary">
-  <a href="/" class="brand">Ryan Saunders</a>
-  <div class="links">
-    <a href="#shipped">work</a>
-    <a href="/nexus/">nexus</a>
-    <a href="#lab">lab</a>
-    <a href="/about/">about</a>
-    <a href="#contact">contact</a>
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="cbox" aria-hidden="true"></span>
+      <span class="pin" aria-hidden="true"></span>
+      Ryan Saunders
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#work">work</a>
+      <a href="#lab">lab</a>
+      <a href="/about/">about</a>
+      <a href="#contact">contact</a>
+    </nav>
   </div>
-</nav>
+</div>
 
-<main class="page">
-
-  <header class="page-head">
+<a id="top"></a>
+<header class="hero">
+  <div class="wrap">
     <h1>Ryan Saunders</h1>
-    <div class="rule-heavy" aria-hidden="true"></div>
-    <p class="tagline">iOS developer. Canada / remote.</p>
-    <p class="tagline">I build stuff. I ship some of it. I tinker a lot.</p>
-  </header>
+    <p class="role">iOS developer · Canada / remote</p>
+    <p class="intro">I build small, careful apps for iPhone, iPad, and Mac — and a lot of tools for myself along the way. <span class="muted">Placeholder intro; real copy comes later.</span></p>
+  </div>
+</header>
 
-  <section id="shipped">
-    <h2>SHIPPED</h2>
-    <div class="card-grid">
-      <div class="ship-card">
-        <div class="ship-head">
-          <img src="/images/icons/integenius-80.png" alt="" aria-hidden="true">
-          <h3><a href="/integenius/">integenius</a></h3>
-        </div>
-        <p class="sub">Arithmetic flash cards for the iPad generation.</p>
-        <div class="ship-foot">
-          <span>● live · v3 apr '26</span>
-          <a class="store" href="https://apps.apple.com/ca/app/integenius/id6471911678" target="_blank" rel="noopener noreferrer">[app store]</a>
-        </div>
+<main>
+  <section id="work">
+    <div class="wrap">
+      <p class="lbl">Work</p>
+      <div class="list">
+        <div class="row"><a class="nm" href="/integenius/">Integenius</a><span class="desc">Arithmetic flash cards for the iPad generation.</span><span class="status"><span class="live">●</span> live</span></div>
+        <div class="row"><a class="nm" href="/kitchensynk/">Kitchen Synk</a><span class="desc">Parallel cooking timers for the four-burner dinner.</span><span class="status"><span class="live">●</span> live</span></div>
+        <div class="row"><a class="nm" href="/solitairezero/">Solitaire Zero</a><span class="desc">Klondike solitaire, no fuss, for free.</span><span class="status"><span class="live">●</span> live</span></div>
       </div>
-      <div class="ship-card">
-        <div class="ship-head">
-          <img src="/images/icons/kitchensynkv2-80.jpg" alt="" aria-hidden="true">
-          <h3><a href="/kitchensynk/">kitchen synk</a></h3>
-        </div>
-        <p class="sub">An alternative to the built-in iOS Timer app, for those cooks using every burner.</p>
-        <div class="ship-foot">
-          <span>● live · v2 spring '26</span>
-          <a class="store" href="https://apps.apple.com/us/app/kitchen-synk/id6755136814" target="_blank" rel="noopener noreferrer">[app store]</a>
-        </div>
-      </div>
-      <div class="ship-card">
-        <div class="ship-head">
-          <img src="/images/icons/solitairezero-80.png" alt="" aria-hidden="true">
-          <h3><a href="/solitairezero/">solitaire zero</a></h3>
-        </div>
-        <p class="sub">Because sometimes you just want to play solitaire with no fuss.</p>
-        <div class="ship-foot">
-          <span>● live · v1 2026</span>
-          <a class="store" href="https://apps.apple.com/us/app/solitaire-zero/id6760957963" target="_blank" rel="noopener noreferrer">[app store]</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="nexus">
-    <h2>NEXUS</h2>
-    <div class="split">
-      <div class="entry">
-        <p class="sub">My ever-evolving tool for managing AI workflows. Tickets, live agent monitoring, report management and viewing, etc.</p>
-        <br>
-        <p class="sub">node.js · fastify · vanilla js</p>
-        <br>
-                <div class="entry-line">
-          <a href="/nexus/">More about Nexus</a>
-        </div>
-      </div>
-      <figure>
-        <picture>
-          <source media="(prefers-color-scheme: light)" srcset="/images/nexus/hero-light-sessions-scaled.jpg">
-          <img src="/images/nexus/hero-dark-sessions-scaled.jpg" alt="Nexus sessions monitor: twelve agents in flight, color-coded by task age">
-        </picture>
-        <figcaption>fig 1. nexus session monitor — twelve agents in flight</figcaption>
-      </figure>
     </div>
   </section>
 
   <section id="lab">
-    <h2>IN THE LAB</h2>
-    <div class="card-grid">
-      <div class="ship-card">
-        <p class="card-label">exp-001 · tool</p>
-        <div class="ship-head">
-          <h3><a href="/edassists/">ed assists</a></h3>
-        </div>
-        <p class="sub">Ed would like to Assist the video editors of the world.</p>
-        <div class="ship-foot"><span>○ prototype</span></div>
-      </div>
-      <div class="ship-card">
-        <p class="card-label">exp-004 · tool</p>
-        <div class="ship-head">
-          <h3><a href="/cardinal/">cardinal</a></h3>
-        </div>
-        <p class="sub">The missing link between Contacts and Calendars.</p>
-        <div class="ship-foot"><span>○ tinkering</span></div>
-      </div>
-      <div class="ship-card">
-        <p class="card-label">arcade · games</p>
-        <div class="ship-head">
-          <h3><a href="/neon-arcade/">the neon arcade</a></h3>
-        </div>
-        <p class="sub">Where I explore and pay homage to the classics, in Swift.</p>
-        <div class="ship-foot"><span>○ in development</span></div>
+    <div class="wrap">
+      <p class="lbl">In the lab</p>
+      <div class="list">
+        <div class="row"><a class="nm" href="/edassists/">Ed Assists</a><span class="desc">A hand for the video editors of the world.</span><span class="status">○ prototype</span></div>
+        <div class="row"><a class="nm" href="/cardinal/">Cardinal</a><span class="desc">The missing link between Contacts and Calendars.</span><span class="status">○ tinkering</span></div>
+        <div class="row"><a class="nm" href="/neon-arcade/">Neon Arcade</a><span class="desc">Homage to the classics, written in Swift.</span><span class="status">○ in dev</span></div>
       </div>
     </div>
   </section>
 
-  <section id="ai">
-    <h2>AI STUFF</h2>
-    <p class="card-label">now</p>
-    <div class="flow">
-      <div class="flow-node"><span class="tool-name">nexus</span><span class="tool-role">tickets</span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node"><span class="tool-name">claude</span><span class="tool-role">agents</span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node"><span class="tool-name">xcode · git</span><span class="tool-role"><span class="gate-badge">gate</span></span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node"><span class="tool-name">review</span><span class="tool-role">every diff</span></div>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="lbl">Contact</p>
+      <p class="intro"><a href="https://www.linkedin.com/in/systemseven/" target="_blank" rel="noopener noreferrer">linkedin</a> · <a href="#contact">email</a></p>
+      <a class="btn" href="#">View on App Store</a>
     </div>
-    <p class="card-label">next</p>
-    <div class="flow">
-      <div class="flow-node"><span class="tool-name">nexus</span><span class="tool-role">tickets</span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node"><span class="tool-name">claude</span><span class="tool-role">designs · specs · plans</span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node flow-placeholder"><span class="tool-name">local llms</span><span class="tool-role">implementation · routine</span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node"><span class="tool-name">xcode · git</span><span class="tool-role"><span class="gate-badge">gate</span></span></div>
-      <span class="flow-arrow" aria-hidden="true"></span>
-      <div class="flow-node"><span class="tool-name">review</span><span class="tool-role">every diff</span></div>
-    </div>
-    <p class="flow-caption">Multi-agent workflow, human-reviewed — I read every diff. <a href="/about/">more →</a></p>
   </section>
-
-  <section id="contact">
-    <h2>CONTACT</h2>
-    <p>[<a href="https://www.linkedin.com/in/systemseven/" target="_blank" rel="noopener noreferrer">linkedin</a>]</p>
-    <form class="contact-form" action="https://formspree.io/f/mvgyazvd" method="POST">
-      <label for="email">your email</label>
-      <input type="email" name="email" id="email" required autocomplete="email">
-      <label for="message">your message</label>
-      <textarea name="message" id="message" required rows="5"></textarea>
-      <button type="submit">send &gt;</button>
-    </form>
-  </section>
-
 </main>
 
-<footer class="foot">
-  <span>© 2026 · Ryan Saunders</span>
-  <span class="jab">I added light mode. I'm not happy about it, but I did it.</span>
+<footer>
+  <div class="wrap">
+    <span>© 2026 · Ryan Saunders</span>
+    <span>A special effect without a story is a pretty boring thing.</span>
+  </div>
 </footer>
 
 </body>

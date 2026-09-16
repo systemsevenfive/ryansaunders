@@ -9,53 +9,59 @@
 </head>
 <body>
 
-<nav class="nav" aria-label="Primary">
-  <a href="/" class="brand"><span class="pulse" aria-hidden="true"></span>Ryan Saunders</a>
-  <div class="links">
-    <a href="/">home</a>
-    <a href="/#lab">lab</a>
-    <a href="/about/">about</a>
-    <a href="/#contact">contact</a>
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="cbox" aria-hidden="true"></span>
+      <span class="pin" aria-hidden="true"></span>
+      Ryan Saunders
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="/#work">work</a>
+      <a href="/#lab">lab</a>
+      <a href="/about/">about</a>
+      <a href="/#contact">contact</a>
+    </nav>
   </div>
-</nav>
+</div>
 
 <main class="page">
 
-  <div class="crumb">← <a href="/#tools">Back to Tools</a></div>
+  <div class="crumb"><a href="/#tools">Back to Tools</a></div>
 
   <article>
     <header class="title-block">
-      <div class="eyebrow">Tools · Built &amp; Running</div>
+      <div class="eyebrow"></div>
       <h1>Nexus</h1>
-      <p class="tag">My answer to Jira going down for a couple hours.</p>
+      <p class="tag"></p>
       <div class="meta-grid">
-        <div>Status<b class="running">● Running</b></div>
-        <div>Year<b>2025 — 2026</b></div>
-        <div>Platform<b>Node.js · Web</b></div>
-        <div>Repo<b>Local · Private</b></div>
+        <div><b class="running"></b></div>
+        <div><b></b></div>
+        <div><b></b></div>
+        <div><b></b></div>
       </div>
     </header>
 
     <div class="module-strip">
       <div class="module-card">
-        <div class="module-name">Tickets</div>
-        <p class="module-desc">Board, tickets, state machine. No Jira.</p>
+        <div class="module-name"></div>
+        <p class="module-desc"></p>
       </div>
       <div class="module-card">
-        <div class="module-name">Reports</div>
-        <p class="module-desc">Themed viewer for reports from Claude Code.</p>
+        <div class="module-name"></div>
+        <p class="module-desc"></p>
       </div>
       <div class="module-card">
-        <div class="module-name">Designs</div>
-        <p class="module-desc">Where Claude's design mockups go for future reference</p>
+        <div class="module-name"></div>
+        <p class="module-desc"></p>
       </div>
       <div class="module-card">
-        <div class="module-name">Architecture</div>
-        <p class="module-desc">Architectural graph of all projects, powered by <a href="../sonny/">Sonny</a></p>
+        <div class="module-name"></div>
+        <p class="module-desc"><a href="../sonny/">Sonny</a></p>
       </div>
       <div class="module-card">
-        <div class="module-name">Glossary</div>
-        <p class="module-desc">For when I forget things</p>
+        <div class="module-name"></div>
+        <p class="module-desc"></p>
       </div>
     </div>
 
@@ -81,43 +87,43 @@
 
     <section class="prose">
       <h2><span class="num">00</span>What it is</h2>
-      <p>More than just my project board, it's where my agent pipeline lives. Live agent session monitoring, a full ticket board, architectural diagrams for all projects, report consolidation, and a glossary.</p>
+      <p></p>
 
       <div class="stack">
-        <span class="pill">Node.js</span>
-        <span class="pill">Fastify</span>
-        <span class="pill">Vanilla JS</span>
-        <span class="pill">JSON</span>
-        <span class="pill">Git</span>
-        <span class="pill">Claude Code</span>
-        <span class="pill">MCP</span>
-        <span class="pill">Sonny</span>
+        <span class="pill"></span>
+        <span class="pill"></span>
+        <span class="pill"></span>
+        <span class="pill"></span>
+        <span class="pill"></span>
+        <span class="pill"></span>
+        <span class="pill"></span>
+        <span class="pill"></span>
       </div>
 
       <ul class="feature-list">
-        <li>Multi-project ticket board with full state machine, atomic claim, and branch and PR links</li>
-        <li>Live Sessions view showing each active agent's current step, heartbeat, and alerts in real time</li>
-        <li>Themed Reports hub for standups, post-mortems, swarm summaries, and session reports</li>
-        <li>Designs tab as a stable home for Claude-authored mockups, linked to the ticket they belong to</li>
-        <li>Architecture tab driven by Sonny, refreshed daily across every project</li>
-        <li>Glossary as a graph rather than a simple document</li>
-        <li>Local-first storage: JSON files, no database, optional auto-commits to a separate data repo</li>
-        <li>Anchors a deliberate agent pipeline (brainstorm, spec, plan, TDD, friction-pattern review, PR) rather than free-form code generation</li>
-        <li>Self-healing swarm supervision: heartbeat monitoring, automatic restarts on stall, end-of-run HTML reports</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
 
       <h2><span class="num">01</span>Why it exists</h2>
-      <p>Because I learned to use Jira as part of my daily work routine years ago, setting it up for my personal projects seemed like a no-brainer. It was a good opportunity to test what I knew, and fill in the gaps of what I didn't. After a month of using it with Claude Code through the MCP, I saw some limitations, and some opportunities to streamline my own workflow.</p>
-      <p>I was also generating a lot of reports from Claude Code. Not just the specs and implementation plans, but agent session reports. Learnings from debugging and troubleshooting. Targeted investigations on best practices for new frameworks like Liquid Glass. I decided I should have something better than markdown files, and the result was the first iteration of Nexus- a report viewer with a theme picker. When Atlassian had a major outage one evening, I started wondering if I could build my own solution, chiselled down to just the parts I needed.</p>
-      <p>What started as a simple report viewer grew a ticket board, knowledge repo, design extension for Claude, and a full workflow hub as each gap became obvious.</p>
+      <p></p>
+      <p></p>
+      <p></p>
 
       <h2><span class="num">02</span>What I built</h2>
-      <p>Nexus runs locally as a Node.js server backed by plain JSON files. The ticket system handles multiple project spaces, full state transitions, comments, branches, and PR links, with auto-commits to a separate data repo so the code stays clean.</p>
-      <p>The reports hub is a themed viewer for everything Claude generates during a session: standups, post-mortems, swarm summaries, insights. Additional themes are easily added according to the vibe of the day. Themes apply everywhere, picked by whatever the vibe of the day is. The designs tab is where mockups and visual decisions live, so they don't get lost in chat history.</p>
-      <p>The architecture tab runs Sonny against any project and renders the result as a navigable graph showing types, dependencies and relationships without leaving the hub. Same format for the glossary. Explore, don't just read.</p>
+      <p></p>
+      <p></p>
+      <p></p>
 
       <h2><span class="num">03</span>What's next</h2>
-      <p>Nexus evolves with my workflow. Each agent session that surfaces a gap becomes a ticket. It's a tool I use every day, and the backlog is the roadmap.</p>
+      <p></p>
     </section>
   </article>
 
@@ -130,10 +136,11 @@
 
 </main>
 
-<footer class="foot">
-  <span>© 2026 · Ryan Saunders</span>
-  <span class="jab">You're viewing this in light mode — bold choice.</span>
-  <span>v26</span>
+<footer>
+  <div class="wrap">
+    <span>© 2026 · Ryan Saunders</span>
+    <span>built plain · loads fast</span>
+  </div>
 </footer>
 
 <script>
